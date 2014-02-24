@@ -1,5 +1,53 @@
-#**css-burrito** 
-##**an organizational Sass template**
+#**530 Framework**  
+##**an organizational Sass template based off of CSS Burrito**
+
+####Helpful Links about Style guides, best practices, SMACSS, OOCSS, BEM, etc.
+
+http://css-tricks.com/design-systems-building-future/
+
+http://css-tricks.com/sass-style-guide/
+
+https://github.com/csswizardry/CSS-Guidelines
+
+http://css-tricks.com/design-systems-building-future/
+
+http://api.yandex.com/bem/
+
+https://speakerdeck.com/mdo/build-your-own-bootstrap
+
+http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
+
+http://5by5.tv/changelog/112
+
+https://github.com/zeljkoprsa/waterlee-boilerplate
+
+http://zeptojs.com/
+
+https://github.com/csswizardry/CSS-Guidelines
+
+http://css.dzone.com/articles/building-your-own-front-end-ui
+
+http://www.mightybytes.com/blog/entry/front-end-development-frameworks/
+
+http://csswizardry.com/2012/11/code-smells-in-css/
+
+http://compass-style.org/help/tutorials/best_practices/
+
+http://thesassway.com/beginner/how-to-structure-a-sass-project/
+
+http://smacss.com/
+
+http://joshbroton.com/my-sass-less-css-practices-modularization-nesting-variables-mixins-etc/
+
+http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/
+
+http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/
+
+https://github.com/csswizardry/CSS-Guidelines
+
+http://csswizardry.com/2011/10/the-island-object/
+
+http://scaffy.railsware.com/#p1
 
 To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
 
