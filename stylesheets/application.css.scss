@@ -1,0 +1,65 @@
+// css-burrito v1.0 | MIT License | github.com/jasonreece/css-burrito
+
+// -------------------------------------
+//   Application.css.scss
+// -------------------------------------
+// ----- Contains an import section for libraries, core, and modules, the inbox,
+// ----- and a shame section for quick fixes and hacks
+
+// -------------------------------------
+//   Libraries
+// -------------------------------------
+
+// ----- Reset - Normalize.css ----- //
+// @import "libs/normalize";
+
+// ----- Variable overrides for Bootstrap and other libraries ----- //
+// @import "libs/library-variable-overrides";
+
+// ----- Bootstrap - Recommended Version: https://github.com/thomas-mcdonald/bootstrap-sass ----- //
+// @import "bootstrap";
+// @import "bootstrap-responsive";
+
+// ----- Compass - Setup: http://compass-style.org/help/
+// ----- Run compass create on project root 
+// ----- Delete generated ie, print, and screen files  
+// ----- Update paths on config.rb ----- //
+// @import "compass";
+
+
+// -------------------------------------
+//   Core
+// -------------------------------------
+
+// ----- Settings - @Font-Face Declarations, Variables ----- //
+@import "core/settings";
+
+// ----- Helpers - Extends, Functions, and Mixins ----- //
+@import "core/helpers";
+
+// ----- Base - Base-level tags (body, p, etc.) ----- //
+@import "core/base";
+
+// ----- Typography - Fonts and Colors ----- //
+@import "core/typography";
+
+// ----- Layout - Margin, Padding, Sizing ----- //
+@import "core/layout";
+
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+@import "modules/modules";
+
+// -------------------------------------
+//   Inbox 
+// -------------------------------------
+// ----- The inbox allows developers, and those not actively working on the CSS, 
+// to quickly add styles that are easily seen by the maintainer of the file.
+
+
+// -------------------------------------
+//   Shame 
+// -------------------------------------
+// ----- Need to add a quick fix, hack, or questionable technique?  Add it here, fix it later.

@@ -1,0 +1,62 @@
+// -------------------------------------
+//   Base
+// -------------------------------------
+// ----- Base-level tags (body, p, etc.)
+// -------------------------------------
+
+::selection{
+  background:#333;
+  color:#fff;
+  text-shadow:none;
+}
+::-moz-selection{
+  background:#333;
+  color:#fff;
+  text-shadow:none;
+}
+::-webkit-selection{
+  background:#333;
+  color:#fff;
+  text-shadow:none;
+}
+
+body {}
+
+p {}
+
+h1{}
+
+h2{}
+
+h3{}
+
+h4{}
+
+h5{}
+
+h6 {}
+
+em {}
+
+b {}
+
+ul {}
+
+li {}
+
+nav {}
+
+aside {}
+
+article {}
+
+nav {
+  ul {
+    list-style:none;
+    li {
+      a {
+
+      }
+    }
+  }
+}
