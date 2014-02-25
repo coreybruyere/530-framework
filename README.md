@@ -1,29 +1,59 @@
 #**530 Framework**  
 ##**an organizational Sass template based off of CSS Burrito**
 
-####Helpful Links about Style guides, best practices, SMACSS, OOCSS, BEM, etc.
+### Style Guide Rules
 
-http://css-tricks.com/design-systems-building-future/
+#####List @extend(s) First
 
-http://css-tricks.com/sass-style-guide/
+#####List "Regular" Styles Next
+
+#####List @include(s) Next
+
+#####Nested Selectors Last
+
+#####All Vendor Prefixes Use @mixins
+
+#####Maximum Nesting: Three Levels Deep
+
+#####Maximum Nesting: 50 Lines
+
+#####Global and Section-Specific Sass Files Are just Table of Contents
+
+#####List Vendor/Global Dependancies First, Then Author Dependancies, Then Patterns, Then Parts
+
+#####Break Into As Many Small Files As Makes Sense
+
+#####Partials are named _partial.scss
+
+#####In Deployment, Compile Compressed
+
+#####Be Generous With Comments
+
+#####Variablize All Common Numbers, and Numbers with Meaning
+
+#####Variablize All Colors
+
+#####Nest and Name Your Media Queries. Nest at bottom of declaration
+
+#####Include all hacky and gross CSS in a _shame.scss file
+
+#####Use same commenting style as in files
+
+###Helpful Links about Style guides, best practices, SMACSS, OOCSS, BEM, etc.
+
+####[More info on style guide above](http://css-tricks.com/sass-style-guide/)
+
+http://scaffy.railsware.com/
 
 https://github.com/csswizardry/CSS-Guidelines
 
-http://css-tricks.com/design-systems-building-future/
+http://smacss.com/
 
 http://api.yandex.com/bem/
 
 https://speakerdeck.com/mdo/build-your-own-bootstrap
 
 http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
-
-http://5by5.tv/changelog/112
-
-https://github.com/zeljkoprsa/waterlee-boilerplate
-
-http://zeptojs.com/
-
-https://github.com/csswizardry/CSS-Guidelines
 
 http://css.dzone.com/articles/building-your-own-front-end-ui
 
@@ -35,19 +65,14 @@ http://compass-style.org/help/tutorials/best_practices/
 
 http://thesassway.com/beginner/how-to-structure-a-sass-project/
 
-http://smacss.com/
-
 http://joshbroton.com/my-sass-less-css-practices-modularization-nesting-variables-mixins-etc/
 
 http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/
 
 http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/
 
-https://github.com/csswizardry/CSS-Guidelines
-
 http://csswizardry.com/2011/10/the-island-object/
 
-http://scaffy.railsware.com/#p1
 
 To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
 
@@ -63,16 +88,6 @@ To understand why you would want to use this template, it is a great idea to fam
 * Organize your css files into sections like **base rules**, **layout rules**, and **modules** so that the styling will be flexible and easily maintainable.
 
 ####[MVCSS] (http://mvcss.github.io/) - A Sass based CSS architecture and style guide.  
-
-Ok, now that you're familiar with those concepts, are you hungry for some burrito?
-
-### What is css-burrito?  
-css-burrito is a sass template to help integrate suggested best practices into any project.
-
-To use this template, just delete your current stylesheets directory (or whatever the folder that houses your CSS files is named), and replace it with this one. Then update your path on your projects index page if necessary.
-
-**Note for Rails Users:** 
-Any new ```.scss``` files that are created by generating Rails controls will not be used, and can be deleted.
 
 ###What is in this burrito?
 
@@ -91,7 +106,7 @@ It also contains a **library-variable-overrides** file.  Any overrides to Bootst
 #### **3.  Core** -  There are five core components.
 * **Settings** - @font-face and global variables
 * **Helpers** - Extends, Functions, Mixins
-* **Base** - Base-level tags (body, p, etc.)
+* **Base** - Base-level tags (body, p, nav ul li, etc.)
 * **Typography** - Base-level typography (colors, fonts).
 * **Layouts** - Base-level layout (margin, padding, sizing).  
 
@@ -147,7 +162,7 @@ This will create a file with some default comments, in this case named ```_examp
     * A layout class name should be written as: ```l-example-classname```
     * A typography class name should be written as: ```t-example-classname```
     * A module class name should be written as: ```modulename-example-classname```
-    * Utility class names should be written as: ```u-example-classname```
+    * Helper class names should be written as: ```h-example-classname```
 * Do not over-qualify selectors.  Keep specificity number as low as possible.
 * Use one discrete, comma separated selector per line in multi-selector rulesets.
 
