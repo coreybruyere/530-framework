@@ -1,43 +1,41 @@
 #**530 Framework**  
-##**an organizational Sass template based off of CSS Burrito**
+##**An organizational template based off of CSS Burrito**
 
 ### Style Guide Rules
 
-#####List @extend(s) First
+-List @extend(s) First
 
-#####List "Regular" Styles Next
+-List "Regular" Styles Next
 
-#####List @include(s) Next
+-List @include(s) Next
 
-#####Nested Selectors Last
+-Nested Selectors Last
 
-#####All Vendor Prefixes Use @mixins
+-All Vendor Prefixes Use @mixins
 
-#####Maximum Nesting: Three Levels Deep
+-Maximum Nesting: Three Levels Deep
 
-#####Maximum Nesting: 50 Lines
+-Maximum Nesting: 50 Lines
 
-#####Global and Section-Specific Sass Files Are just Table of Contents
+-Global and Section-Specific Sass Files Are just Table of Contents
 
-#####List Vendor/Global Dependancies First, Then Author Dependancies, Then Patterns, Then Parts
+-List Vendor/Global Dependancies First, Then Author Dependancies, Then Patterns, Then Parts
 
-#####Break Into As Many Small Files As Makes Sense
+-Break Into As Many Small Files As Makes Sense
 
-#####Partials are named _partial.scss
+-Partials are named _partial.scss
 
-#####In Deployment, Compile Compressed
+-In Deployment, Compile Compressed
 
-#####Be Generous With Comments
+-Be Generous With Comments
 
-#####Variablize All Common Numbers, and Numbers with Meaning
+-Variablize All Common Numbers, and Numbers with Meaning
 
-#####Variablize All Colors
+-Variablize All Colors
 
-#####Nest and Name Your Media Queries. Nest at bottom of declaration
+-Nest and Name Your Media Queries. Nest at bottom of declaration
 
-#####Include all hacky and gross CSS in a _shame.scss file
-
-#####Use same commenting style as in files
+-Include all hacky and gross CSS in a _shame.scss file
 
 ###Helpful Links about Style guides, best practices, SMACSS, OOCSS, BEM, etc.
 
@@ -51,11 +49,7 @@ http://smacss.com/
 
 http://api.yandex.com/bem/
 
-https://speakerdeck.com/mdo/build-your-own-bootstrap
-
 http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
-
-http://css.dzone.com/articles/building-your-own-front-end-ui
 
 http://www.mightybytes.com/blog/entry/front-end-development-frameworks/
 
@@ -71,7 +65,7 @@ http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented
 
 http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/
 
-http://csswizardry.com/2011/10/the-island-object/
+http://geoffgraham.me/sassifying-wordpress/
 
 
 To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
@@ -91,7 +85,7 @@ To understand why you would want to use this template, it is a great idea to fam
 
 ###What is in this burrito?
 
-css-burrito has four main ingredients.  
+this template has four main ingredients.  
 ####**1.  Application.css.scss**
 - This section serves three purposes.  
 * It imports all of the files from the **Libs**, **Core** and **Module** sections.  
@@ -170,5 +164,3 @@ This will create a file with some default comments, in this case named ```_examp
 * Do not nest deeper than 3 levels (with the exception of pseudo/hover states).
 * Declare ```@extend``` followed by ```@include``` statements first in a declaration block whenever possible.
 * If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed
-
-See something that could be improved?  Tweet [@jason_reece](https://twitter.com/Jason_Reece) with your thoughts.
