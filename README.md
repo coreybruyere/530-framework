@@ -131,20 +131,20 @@ stylesheets/
 `– application.css.scss  # primary Sass file 
 ```
 
-###this template has six main ingredients.  
+###This template has six main ingredients.  
 ####**1.  Application.css.scss**
-- This section serves 2 purposes.  
+- This section serves two purposes.  
 * It imports all files from each folder.  
 * It has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
 
 #### **2.  Libs**
-This section contains a **libs-override** file.  Any overrides to Bootstrap or other library or vendor variables should be made in this file to prevent unnecessary overwriting.  
+* **libs-override**  Any overrides to Bootstrap or other library or vendor variables should be made in this file to prevent unnecessary overwriting.  
 
 #### **3.  Helpers**
 * **Settings** - @font-face and global variables
 * **Helpers** - Extends, Functions, Mixins
   
-#### **3.  Core** -  There are five core components.
+#### **3.  Core** -  There are three core components.
 * **Normalize** - Normalize reset file
 * **Base** - Base-level tags (body, p, nav ul li, etc.)
 * **Typography** - Base-level typography (colors, fonts). 
