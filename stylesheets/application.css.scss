@@ -1,24 +1,18 @@
-// css-burrito v1.0 | MIT License | github.com/jasonreece/css-burrito
+// 530-framework | https://github.com/coreybruyere/530-framework
 
 // -------------------------------------
 //   Application.css.scss
 // -------------------------------------
-// ----- Contains an import section for libraries, core, and modules, the inbox,
+// ----- Contains an import section for libraries, helpers, core, layout, and components
 // ----- and a shame section for quick fixes and hacks
 
 // -------------------------------------
 //   Libraries
 // -------------------------------------
 
-// ----- Reset - Normalize.css ----- //
-// @import "libs/normalize";
-
 // ----- Variable overrides for Bootstrap and other libraries ----- //
-// @import "libs/library-variable-overrides";
+// @import "libs/libs-override";
 
-// ----- Bootstrap - Recommended Version: https://github.com/thomas-mcdonald/bootstrap-sass ----- //
-// @import "bootstrap";
-// @import "bootstrap-responsive";
 
 // ----- Compass - Setup: http://compass-style.org/help/
 // ----- Run compass create on project root 
@@ -28,14 +22,22 @@
 
 
 // -------------------------------------
-//   Core
+//   Helpers
 // -------------------------------------
 
 // ----- Settings - @Font-Face Declarations, Variables ----- //
-@import "core/settings";
+@import "helpers/settings";
 
 // ----- Helpers - Extends, Functions, and Mixins ----- //
-@import "core/helpers";
+@import "helpers/helpers";
+
+
+// -------------------------------------
+//   Core
+// -------------------------------------
+
+// ----- Reset - Normalize.css ----- //
+@import "core/normalize";
 
 // ----- Base - Base-level tags (body, p, etc.) ----- //
 @import "core/base";
@@ -43,20 +45,43 @@
 // ----- Typography - Fonts and Colors ----- //
 @import "core/typography";
 
-// ----- Layout - Margin, Padding, Sizing ----- //
-@import "core/layout";
-
 
 // -------------------------------------
-//   Modules
+//   Layout
 // -------------------------------------
-@import "modules/modules";
+// ----- Basic structure of main layouts. Grid is also located here ----- 
+// --- Don't style component-like pieces here. i.e. the nav --- 
+
+// ----- Grid Layout ----- //
+@import "layout/grid";
+
+// ----- Header Layout ----- //
+@import "layout/header";
+
+// ----- Footer Layout ----- //
+@import "layout/footer";
+
+// ----- Sidebar Layout ----- //
+@import "layout/sidebar";
 
 // -------------------------------------
-//   Inbox 
+//   Components
 // -------------------------------------
-// ----- The inbox allows developers, and those not actively working on the CSS, 
-// to quickly add styles that are easily seen by the maintainer of the file.
+// ----- Include all partials into components.scss ----- 
+// --- Build all reusable components within here --- 
+
+// ----- Components Import ----- //
+@import "components/components";
+
+// -------------------------------------
+//   Pages
+// -------------------------------------
+// ----- All page specific styling ----- 
+// --- Only use here if you can't use in components --- 
+
+// ----- Home page ----- //
+@import "pages/home";
+
 
 
 // -------------------------------------

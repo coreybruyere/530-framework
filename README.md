@@ -41,6 +41,8 @@
 
 ####[More info on style guide above](http://css-tricks.com/sass-style-guide/)
 
+http://www.sitepoint.com/architecture-sass-project/
+
 http://scaffy.railsware.com/
 
 https://github.com/csswizardry/CSS-Guidelines
@@ -83,34 +85,88 @@ To understand why you would want to use this template, it is a great idea to fam
 
 ####[MVCSS] (http://mvcss.github.io/) - A Sass based CSS architecture and style guide.  
 
-###What is in this burrito?
+###What's in this project?
 
-this template has four main ingredients.  
+stylesheets/ 
+| 
+|– core/ 
+|   |– _reset.scss       # Reset/normalize 
+|   |– _typography.scss  # Typography rules 
+|   ...                  # Etc… 
+| 
+|– components/ 
+|   |– _buttons.scss     # Buttons 
+|   |– _carousel.scss    # Carousel 
+|   |– _cover.scss       # Cover 
+|   |– _dropdown.scss    # Dropdown 
+|   |– _navigation.scss  # Navigation 
+|   ...                  # Etc… 
+| 
+|– helpers/ 
+|   |– _settings.scss    # Font Declarations, Color, Type Variables
+|   |– _helpers.scss     # Helper Classes, Mixins, Functions, Utilities
+|   ...                  # Etc… 
+| 
+|– layout/ 
+|   |– _grid.scss        # Grid system 
+|   |– _header.scss      # Header 
+|   |– _footer.scss      # Footer 
+|   |– _sidebar.scss     # Sidebar 
+|   |– _forms.scss       # Forms 
+|   ...                  # Etc… 
+| 
+|– pages/ 
+|   |– _home.scss        # Home specific styles 
+|   |– _contact.scss     # Contact specific styles 
+|   ...                  # Etc… 
+| 
+| 
+|– libs/ 
+|   |– _bootstrap.scss   # Bootstrap 
+|   |– _jquery-ui.scss   # jQuery UI 
+|   |_ _libs-override    # Library Variable Overrides
+|   ...                  # Etc… 
+| 
+| 
+`– application.css.scss  # primary Sass file 
+
+###this template has six main ingredients.  
 ####**1.  Application.css.scss**
-- This section serves three purposes.  
-* It imports all of the files from the **Libs**, **Core** and **Module** sections.  
-* It has an **Inbox** section where developers that don't usually work on the project can leave temporary files that are easily seen by the maintainers of the project
+- This section serves 2 purposes.  
+* It imports all files from each folder.  
 * It has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
 
 #### **2.  Libs**
-This section will house CSS libraries like [Normalize](http://necolas.github.io/normalize.css/), [Compass](http://compass-style.org/), [Bootstrap](http://getbootstrap.com/), [Foundation](http://foundation.zurb.com/), or [Pure](http://purecss.io/).  
-It also contains a **library-variable-overrides** file.  Any overrides to Bootstrap or other library variables should be made in this file to prevent unnecessary overwriting.  
-**Normalize** is included in the libs folder by default.
+This section contains a **libs-override** file.  Any overrides to Bootstrap or other library or vendor variables should be made in this file to prevent unnecessary overwriting.  
+
+#### **3.  Helpers**
+This section houses **settings**, which has all Font-Face declarations and variables for text, font, and color. It also has a **helpers** file which has all extends, functions, and mixins.
   
 #### **3.  Core** -  There are five core components.
-* **Settings** - @font-face and global variables
-* **Helpers** - Extends, Functions, Mixins
+* **Normalize** - Normalize reset file
 * **Base** - Base-level tags (body, p, nav ul li, etc.)
 * **Typography** - Base-level typography (colors, fonts).
+
+* **Settings** - @font-face and global variables
+* **Helpers** - Extends, Functions, Mixins
 * **Layouts** - Base-level layout (margin, padding, sizing).  
 
-####**4.  Modules**  
-Any unit of style that can be found across multiple pages (Buttons, Navigations, Modals).  
-**Most of your styles should be found here.**
+####**4.  Layout** - Major structural pieces. **Use components if possible.**
+* **Grid** - Use grid of choice here
+* **Header** - Header structure
+* **Footer** - Footer structure
+* **Sidebar** - Sidebar structure
+
+####**5. Pages** - **This should RARELY be used**
+* **Home** - Home page specific style overrides 
+
+####**6. Components** - **Most of your styles should be found here.**
+Any unit of style that can be found across multiple pages (Buttons, Navigations, Carousels, Modals).  
+
 
 ###Lets talk about States.
 
-Inside the **layouts** file and in the **example-module** file, there is a section for styling states.
+Inside the **components** file and in the **example-module** file, there is a section for styling states.
 
 * States are styles that override all other styles.  Usually via javascript.  
 * States are generally applied to the same element as a layout rule, or to the same element as a base module.
@@ -162,5 +218,5 @@ This will create a file with some default comments, in this case named ```_examp
 
 ####Preprocessors 
 * Do not nest deeper than 3 levels (with the exception of pseudo/hover states).
-* Declare ```@extend``` followed by ```@include``` statements first in a declaration block whenever possible.
+* Declare ```@extend``` followed by styles then ```@include``` statements at the end of the declaration block whenever possible.
 * If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed
