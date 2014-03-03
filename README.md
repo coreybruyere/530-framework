@@ -86,7 +86,7 @@ To understand why you would want to use this template, it is a great idea to fam
 ####[MVCSS] (http://mvcss.github.io/) - A Sass based CSS architecture and style guide.  
 
 ###What's in this project?
-
+```
 stylesheets/ 
 | 
 |– core/ 
@@ -129,6 +129,7 @@ stylesheets/
 | 
 | 
 `– application.css.scss  # primary Sass file 
+```
 
 ###this template has six main ingredients.  
 ####**1.  Application.css.scss**
@@ -140,16 +141,13 @@ stylesheets/
 This section contains a **libs-override** file.  Any overrides to Bootstrap or other library or vendor variables should be made in this file to prevent unnecessary overwriting.  
 
 #### **3.  Helpers**
-This section houses **settings**, which has all Font-Face declarations and variables for text, font, and color. It also has a **helpers** file which has all extends, functions, and mixins.
+* **Settings** - @font-face and global variables
+* **Helpers** - Extends, Functions, Mixins
   
 #### **3.  Core** -  There are five core components.
 * **Normalize** - Normalize reset file
 * **Base** - Base-level tags (body, p, nav ul li, etc.)
-* **Typography** - Base-level typography (colors, fonts).
-
-* **Settings** - @font-face and global variables
-* **Helpers** - Extends, Functions, Mixins
-* **Layouts** - Base-level layout (margin, padding, sizing).  
+* **Typography** - Base-level typography (colors, fonts). 
 
 ####**4.  Layout** - Major structural pieces. **Use components if possible.**
 * **Grid** - Use grid of choice here
