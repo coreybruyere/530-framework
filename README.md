@@ -88,25 +88,22 @@ To understand why you would want to use this template, it is a great idea to fam
 ###What's in this project?
 ```
 stylesheets/ 
-| 
-|– core/ 
-|   |– _reset.scss       # Reset/normalize 
-|   |– _typography.scss  # Typography rules 
+|
+|– libs/ 
+|   |- _libs-override    # Library Variable Overrides
 |   ...                  # Etc… 
-| 
-|– components/ 
-|   |– _buttons.scss     # Buttons 
-|   |– _carousel.scss    # Carousel 
-|   |– _cover.scss       # Cover 
-|   |– _dropdown.scss    # Dropdown 
-|   |– _navigation.scss  # Navigation 
-|   ...                  # Etc… 
-| 
+|
 |– helpers/ 
 |   |– _settings.scss    # Font Declarations, Color, Type Variables
 |   |– _helpers.scss     # Helper Classes, Mixins, Functions, Utilities
 |   ...                  # Etc… 
 | 
+|– core/ 
+|   |– _normalize.scss   # Reset/normalize 
+|   |- _base.scss        # Base-level tags 
+|   |– _typography.scss  # Typography rules 
+|   ...                  # Etc… 
+|
 |– layout/ 
 |   |– _grid.scss        # Grid system 
 |   |– _header.scss      # Header 
@@ -114,19 +111,20 @@ stylesheets/
 |   |– _sidebar.scss     # Sidebar 
 |   |– _forms.scss       # Forms 
 |   ...                  # Etc… 
+|
+|– components/ 
+|   |- _components.scss  # Import of all used components
+|   |– _buttons.scss     # Buttons 
+|   |– _carousel.scss    # Carousel 
+|   |– _cover.scss       # Cover 
+|   |– _dropdown.scss    # Dropdown 
+|   |– _navigation.scss  # Navigation 
+|   ...                  # Etc… 
 | 
 |– pages/ 
 |   |– _home.scss        # Home specific styles 
 |   |– _contact.scss     # Contact specific styles 
 |   ...                  # Etc… 
-| 
-| 
-|– libs/ 
-|   |– _bootstrap.scss   # Bootstrap 
-|   |– _jquery-ui.scss   # jQuery UI 
-|   |_ _libs-override    # Library Variable Overrides
-|   ...                  # Etc… 
-| 
 | 
 `– application.css.scss  # primary Sass file 
 ```
