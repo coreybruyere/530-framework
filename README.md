@@ -47,23 +47,9 @@ http://scaffy.railsware.com/
 
 https://github.com/csswizardry/CSS-Guidelines
 
-http://smacss.com/
-
-http://api.yandex.com/bem/
-
-http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
-
-http://www.mightybytes.com/blog/entry/front-end-development-frameworks/
-
 http://csswizardry.com/2012/11/code-smells-in-css/
 
-http://compass-style.org/help/tutorials/best_practices/
-
 http://thesassway.com/beginner/how-to-structure-a-sass-project/
-
-http://joshbroton.com/my-sass-less-css-practices-modularization-nesting-variables-mixins-etc/
-
-http://coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/
 
 http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/
 
