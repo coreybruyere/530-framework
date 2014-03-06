@@ -128,7 +128,7 @@ stylesheets/
 * **Settings** - @font-face and global variables
 * **Helpers** - Extends, Functions, Mixins
   
-#### **3.  Core** -  There are three core components.
+#### **3.  Core** -  There are three core files.
 * **Normalize** - Normalize reset file
 * **Base** - Base-level tags (body, p, nav ul li, etc.)
 * **Typography** - Base-level typography (colors, fonts). 
