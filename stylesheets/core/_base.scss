@@ -1,7 +1,7 @@
 // -------------------------------------
 //   Base
 // -------------------------------------
-// ----- Base-level tags (body, p, etc.)
+// ----- Base-level & psuedo element tags (body, p, etc.)
 // -------------------------------------
 
 ::selection{
@@ -20,35 +20,50 @@
   text-shadow:none;
 }
 
-body {}
+*, *:before, *:after{
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
 
-p {}
+html{
+  font-size: 62.5%; // Base font size 62.5% for REM mixin
+}
 
-h1{}
+body {
+  margin: 0;
+  padding: 0;
+  @include rem(font-size, 1.6rem);
+}
 
-h2{}
-
-h3{}
-
-h4{}
-
-h5{}
-
-h6 {}
-
-em {}
-
-b {}
-
-ul {}
-
-li {}
+ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+ul li{
+  margin:0;
+  padding:0;
+}
+ol{
+  margin:0;
+  padding:0;
+}
 
 nav {}
 
 aside {}
 
 article {}
+
+img, video{
+  border: 0;
+  outline: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+button{
+  cursor:pointer;
+}
 
 nav {
   ul {

@@ -95,7 +95,6 @@ stylesheets/
 |   |– _header.scss      # Header 
 |   |– _footer.scss      # Footer 
 |   |– _sidebar.scss     # Sidebar 
-|   |– _forms.scss       # Forms 
 |   ...                  # Etc… 
 |
 |– components/ 
@@ -105,6 +104,7 @@ stylesheets/
 |   |– _cover.scss       # Cover 
 |   |– _dropdown.scss    # Dropdown 
 |   |– _navigation.scss  # Navigation 
+|   |– _forms.scss       # Forms 
 |   ...                  # Etc… 
 | 
 |– pages/ 
@@ -189,12 +189,6 @@ This will create a file with some default comments, in this case named ```_examp
 ####General Styling  
 * Avoid using ID's.  Use classes instead.
 * All CSS class names should use dashes instead of underscores or camel case.
-* All CSS class names should begin with a prefix describing the filename where the styles will be written.
-* For example:
-    * A layout class name should be written as: ```l-example-classname```
-    * A typography class name should be written as: ```t-example-classname```
-    * A module class name should be written as: ```modulename-example-classname```
-    * Helper class names should be written as: ```h-example-classname```
 * Do not over-qualify selectors.  Keep specificity number as low as possible.
 * Use one discrete, comma separated selector per line in multi-selector rulesets.
 
