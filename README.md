@@ -144,6 +144,7 @@ stylesheets/
 
 ####**6. Components** - **Most of your styles should be found here.**
 Any unit of style that can be found across multiple pages (Buttons, Navigations, Carousels, Modals).  
+Components are stand alone pieces that can be reused anywhere without having to rewrite any code.
 
 
 ###Lets talk about States.
