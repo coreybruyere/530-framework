@@ -17,7 +17,7 @@
   *text-indent: -9999px;
 }
 
-%ir:before {
+%ir:before {    
   content: "";
   display: block;
   width: 0;
@@ -26,7 +26,14 @@
 
 // Clearfix
 %clearfix, .clearfix {
-  @include clearfix();
+  @include clearfix();   
+}
+
+// Max Width Container 
+%maxwidth {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
 }
 
 
@@ -36,7 +43,7 @@
 
 // -- REM Funciton - See Mixin
 @function parseInt($n) { /* 2 */
-  @return $n / ($n * 0 + 1);
+  @return $n / ($n * 0 + 1); 
 }
 
 
@@ -110,13 +117,13 @@
 }
 
 
-// -- Breakpoints 
+// -- Breakpoints  
 // example @include breakpoint(940){ width:80%; }
 @mixin max-breakpoint($size) {
   @media only screen and (max-width : $size + px) { @content; }
 }
 @mixin min-breakpoint($size) {
-  @media only screen and (min-width : $size + px) { @content; }
+  @media only screen and (min-width : $size + px) { @content; }    
 }
 
 
@@ -145,4 +152,5 @@
   display: block;
   height: auto;
   max-width: 100%;
+  ul {color: black;}
 }

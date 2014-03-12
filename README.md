@@ -1,5 +1,5 @@
-#**530 Framework**  
-##**An organizational template based off of CSS Burrito**
+#**530 Snuggie**  
+##**An organizational template**
 
 ### Style Guide Rules
 
@@ -17,25 +17,23 @@
 
 -Maximum Nesting: 50 Lines
 
--Global and Section-Specific Sass Files Are just Table of Contents
-
 -List Vendor/Global Dependancies First, Then Author Dependancies, Then Patterns, Then Parts
 
--Break Into As Many Small Files As Makes Sense
+-Break Into As Many Small Files As Makes Sense => Use More Components
 
--Partials are named _partial.scss
+-Components are Named _component-name.scss
 
 -In Deployment, Compile Compressed
 
--Be Generous With Comments
+-Be Generous With Comments & Use Same Comment Block Style
 
 -Variablize All Common Numbers, and Numbers with Meaning
 
 -Variablize All Colors
 
--Nest and Name Your Media Queries. Nest at bottom of declaration
+-Nest and Name Your Media Queries. Nest at Bottom of Declaration
 
--Include all hacky and gross CSS in a _shame.scss file
+-Include all Hacky and Gross CSS in application.scss at Bottom in 'Shame' Section
 
 ###Helpful Links about Style guides, best practices, SMACSS, OOCSS, BEM, etc.
 
@@ -95,10 +93,11 @@ stylesheets/
 |   |– _header.scss      # Header 
 |   |– _footer.scss      # Footer 
 |   |– _sidebar.scss     # Sidebar 
+|   |– _main.scss        # Main 
 |   ...                  # Etc… 
 |
 |– components/ 
-|   |- _components.scss  # Import of all used components
+|   |- _all-components.scss  # Import of all used components
 |   |– _buttons.scss     # Buttons 
 |   |– _carousel.scss    # Carousel 
 |   |– _cover.scss       # Cover 
@@ -133,14 +132,18 @@ stylesheets/
 * **Base** - Base-level tags (body, p, nav ul li, etc.)
 * **Typography** - Base-level typography (colors, fonts). 
 
-####**4.  Layout** - Major structural pieces. **Use components if possible.**
+####**4.  Layout** - Major structural pieces. Main Content DIV Wraps. 
+- Good Examples: Header Container Wrap, Header Logo, Footer Copyright, Main Content Containers, etc.
+- Bad Examples: Header Nav (Nav Styles can be reused multiple times. Safer to build as a Component)
 * **Grid** - Use grid of choice here
-* **Header** - Header structure
+* **Header** - Header structure 
 * **Footer** - Footer structure
 * **Sidebar** - Sidebar structure
+* **Main** - Main structure
 
 ####**5. Pages** - **This should RARELY be used**
-* **Home** - Home page specific style overrides 
+- Think Crazy Feature with NO reusuable Components at ALL.
+* **Page-Name** - Page Name page specific style overrides 
 
 ####**6. Components** - **Most of your styles should be found here.**
 Any unit of style that can be found across multiple pages (Buttons, Navigations, Carousels, Modals).  
@@ -190,7 +193,7 @@ This will create a file with some default comments, in this case named ```_examp
 ####General Styling  
 * Avoid using ID's.  Use classes instead.
 * All CSS class names should use dashes instead of underscores or camel case.
-* Do not over-qualify selectors.  Keep specificity number as low as possible.
+* DO NOT over-qualify selectors.  Keep specificity number as low as possible.
 * Use one discrete, comma separated selector per line in multi-selector rulesets.
 
 ####Preprocessors 

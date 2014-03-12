@@ -31,7 +31,10 @@ html{
 body {
   margin: 0;
   padding: 0;
-  @include rem(font-size, 1.6rem);
+  width: 100%;
+  line-height: 1.5;
+  font-family: $reg-font;
+  @include rem(font-size, 1.6px);
 }
 
 ul{
