@@ -41,7 +41,7 @@
 
 To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
 
-####[OOCSS](http://oocss.org/) - Object Oriented CSS
+####[BEM](http://bem.info/method/) - Block, Element, Modifier
 
 * BEM stands for Block, Element, Modifier. The meaning of these terms will be described further in the article.
 * One of the most common examples of a methodology in programming is Object-Oriented Programming. It's a programming paradigm embodied by many languages. In some ways, BEM is similar to OOP. It's a way of describing reality in code, a range of patterns, and a way of thinking about program entities regardless of programming languages being used. 
@@ -90,40 +90,25 @@ stylesheets/
 |   |– _helpers.scss     # Helper Classes, Mixins, Functions, Utilities
 |   |– _normalize.scss   # Reset/normalize 
 |   ...                  # Etc… 
-|
-|– components/ 
-|   |- _all-components.scss  # Import of all used components
-|   |– _buttons.scss     # Buttons 
-|   |– _carousel.scss    # Carousel 
-|   |– _cover.scss       # Cover 
-|   |– _dropdown.scss    # Dropdown 
-|   |– _navigation.scss  # Navigation 
-|   |– _forms.scss       # Forms 
-|   ...                  # Etc… 
-| 
-|– pages/ 
-|   |– _home.scss        # Home specific styles 
-|   |– _contact.scss     # Contact specific styles 
-|   ...                  # Etc… 
 | 
 `– application.css.scss  # primary Sass file 
 ```
 
-###This template has six main ingredients.  
+###This template has five main ingredients.  
 
-####**1.  Application.css.scss**
+####**0.  Application.css.scss**
 - This section serves two purposes.  
 * It imports all files from each folder.  
 * It has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
 
-####**2.  Bits**
+####**1.  Bits**
 * ** Bits are the basic building blocks of matter. Applied to web interfaces, Bits are our HTML tags, such as a form label, an input or a button.
 Bits can also include more abstract elements like color palettes, typography and even more invisible aspects of an interface like animations.
 
-####**3.  Modules**
+####**2.  Modules**
 * ** Modules are groups of Bits combined together and are the smallest fundamental units of a compound, built for reuse. These Modules take on their own properties and serve as the backbone of our design system. For example, a search form.
 
-####**4.  Layout**
+####**3.  Layout**
 * ** Layout are groups of modules and/or bits joined together to form a relatively complex, distinct section of an interface, such as a header or a footer. This is where we declare our main, footer, header, and sidebar wrappers & containers.
 
 ####**4.  Templates**
