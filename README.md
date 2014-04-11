@@ -72,15 +72,18 @@ stylesheets/
 |   |– _carousel.scss    # Carousel 
 |   |– _media.scss       # Media (Video, Ig, Externally generated content)
 |   |– _nav.scss         # Navigation 
-|   |– _forms.scss       # Forms 
+|   |– _search-form.scss # Forms 
 |   ...                  # Etc… 
 |
-|– layout/ 
-|   |– _grid.scss        # Grid system 
+|– chunks/ 
 |   |– _header.scss      # Header 
 |   |– _footer.scss      # Footer 
 |   |– _sidebar.scss     # Sidebar 
 |   |– _body.scss        # Body 
+|   ...                  # Etc… 
+|
+|– templates/ 
+|   |– _custom-temp.scss # Header 
 |   ...                  # Etc… 
 |
 |- utilities/
@@ -106,13 +109,16 @@ stylesheets/
 Bits can also include more abstract elements like color palettes, typography and even more invisible aspects of an interface like animations.
 
 ####**2.  Modules**
-* ** Modules are groups of Bits combined together and are the smallest fundamental units of a compound, built for reuse. These Modules take on their own properties and serve as the backbone of our design system. For example, a search form.
+* ** Modules are groups of Bits combined together and are the smallest fundamental units of a compound, built for **reuse.** These Modules take on their own properties and serve as the backbone of our design system. For example, a search form.
 
-####**3.  Layout**
-* ** Layout are groups of modules and/or bits joined together to form a relatively complex, distinct section of an interface, such as a header or a footer. This is where we declare our main, footer, header, and sidebar wrappers & containers.
+####**3.  Chunks**
+* ** Chunks are groups of modules and/or bits joined together to form a relatively complex, distinct section of an interface, such as a header or a footer. This is where we declare our main, footer, header, and sidebar wrappers & containers. Chunks are used to ensure wrappers and containers are consistent throughtout the whole site. These should be the first pieces that are built on a project. 
 
 ####**4.  Templates**
 * ** Templates consist mostly of groups of Modules stitched together to form pages. Templates are very concrete and piece together our Bits and Modules. Templates can also consist of unique page styling --  [Think Board Mapping Page on Arbor](http://arborcollective.com/snowboards/board-mapping/ "Board Mapping Page"). 
+
+####**5.  Utilities**
+* ** Utilities hold all Base-level tags, the grid, settings (Font Declarations, Color, Type, and Media Query Variables), helpers (Helper classes, mixins, functions, utilities), and normalize or a custom reset. 
 
 ###Lets talk about States.
 
