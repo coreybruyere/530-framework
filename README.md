@@ -25,7 +25,7 @@
 
 -In Deployment, Compile Compressed
 
--Be Generous With Comments & Use Same Comment Block Style
+-Be Generous With Comments & Use Same Comment Block Style 
 
 -Variablize All Common Numbers, and Numbers with Meaning
 
@@ -35,26 +35,16 @@
 
 -Include all Hacky and Gross CSS in application.scss at Bottom in 'Shame' Section
 
-###Helpful Links about Style guides, best practices, SMACSS, OOCSS, BEM, etc.
 
 ####[More info on style guide above](http://css-tricks.com/sass-style-guide/)
 
-http://www.sitepoint.com/architecture-sass-project/
-
-http://scaffy.railsware.com/
-
-https://github.com/csswizardry/CSS-Guidelines
-
-http://csswizardry.com/2012/11/code-smells-in-css/
-
-http://thesassway.com/beginner/how-to-structure-a-sass-project/
-
-http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/
-
-http://geoffgraham.me/sassifying-wordpress/
-
 
 To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
+
+####[OOCSS](http://oocss.org/) - Object Oriented CSS
+
+* BEM stands for Block, Element, Modifier. The meaning of these terms will be described further in the article.
+* One of the most common examples of a methodology in programming is Object-Oriented Programming. It's a programming paradigm embodied by many languages. In some ways, BEM is similar to OOP. It's a way of describing reality in code, a range of patterns, and a way of thinking about program entities regardless of programming languages being used. 
 
 ####[OOCSS](http://oocss.org/) - Object Oriented CSS
 
@@ -73,19 +63,16 @@ To understand why you would want to use this template, it is a great idea to fam
 ```
 stylesheets/ 
 |
-|– libs/ 
-|   |- _libs-override    # Library Variable Overrides
-|   ...                  # Etc… 
-|
-|– helpers/ 
-|   |– _settings.scss    # Font Declarations, Color, Type Variables
-|   |– _helpers.scss     # Helper Classes, Mixins, Functions, Utilities
+|– bits/ 
+|   |– _buttons.scss     # Base styles for buttons
+|   |– _forms.scss       # Base styles for all Form elements (inputs, checkboxes, etc.)
 |   ...                  # Etc… 
 | 
-|– core/ 
-|   |– _normalize.scss   # Reset/normalize 
-|   |- _base.scss        # Base-level tags 
-|   |– _typography.scss  # Typography rules 
+|– modules/ 
+|   |– _carousel.scss    # Carousel 
+|   |– _media.scss       # Media (Video, Ig, Externally generated content)
+|   |– _nav.scss         # Navigation 
+|   |– _forms.scss       # Forms 
 |   ...                  # Etc… 
 |
 |– layout/ 
@@ -93,7 +80,15 @@ stylesheets/
 |   |– _header.scss      # Header 
 |   |– _footer.scss      # Footer 
 |   |– _sidebar.scss     # Sidebar 
-|   |– _main.scss        # Main 
+|   |– _body.scss        # Body 
+|   ...                  # Etc… 
+|
+|- utilities/
+|   |- _base.scss        # Base-level tags 
+|   |– _grid.scss        # Grid system 
+|   |– _settings.scss    # Font Declarations, Color, Type Variables
+|   |– _helpers.scss     # Helper Classes, Mixins, Functions, Utilities
+|   |– _normalize.scss   # Reset/normalize 
 |   ...                  # Etc… 
 |
 |– components/ 
@@ -115,40 +110,24 @@ stylesheets/
 ```
 
 ###This template has six main ingredients.  
+
 ####**1.  Application.css.scss**
 - This section serves two purposes.  
 * It imports all files from each folder.  
 * It has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
 
-#### **2.  Libs**
-* **libs-override**  Any overrides to Bootstrap or other library or vendor variables should be made in this file to prevent unnecessary overwriting.  
+####**2.  Bits**
+* ** Bits are the basic building blocks of matter. Applied to web interfaces, Bits are our HTML tags, such as a form label, an input or a button.
+Bits can also include more abstract elements like color palettes, typography and even more invisible aspects of an interface like animations.
 
-#### **3.  Helpers**
-* **Settings** - @font-face and global variables
-* **Helpers** - Extends, Functions, Mixins
-  
-#### **3.  Core** -  There are three core files.
-* **Normalize** - Normalize reset file
-* **Base** - Base-level tags (body, p, nav ul li, etc.)
-* **Typography** - Base-level typography (colors, fonts). 
+####**3.  Modules**
+* ** Modules are groups of Bits combined together and are the smallest fundamental units of a compound, built for reuse. These Modules take on their own properties and serve as the backbone of our design system. For example, a search form.
 
-####**4.  Layout** - Major structural pieces. Main Content DIV Wraps. 
-- Good Examples: Header Container Wrap, Header Logo, Footer Copyright, Main Content Containers, etc.
-- Bad Examples: Header Nav (Nav Styles can be reused multiple times. Safer to build as a Component)
-* **Grid** - Use grid of choice here
-* **Header** - Header structure 
-* **Footer** - Footer structure
-* **Sidebar** - Sidebar structure
-* **Main** - Main structure
+####**4.  Layout**
+* ** Layout are groups of modules and/or bits joined together to form a relatively complex, distinct section of an interface, such as a header or a footer. This is where we declare our main, footer, header, and sidebar wrappers & containers.
 
-####**5. Pages** - **This should RARELY be used**
-- Think Crazy Feature with NO reusuable Components at ALL.
-* **Page-Name** - Page Name page specific style overrides 
-
-####**6. Components** - **Most of your styles should be found here.**
-Any unit of style that can be found across multiple pages (Buttons, Navigations, Carousels, Modals).  
-Components are stand alone pieces that can be reused anywhere without having to rewrite any code.
-
+####**4.  Templates**
+* ** Templates consist mostly of groups of Modules stitched together to form pages. Templates are very concrete and piece together our Bits and Modules. Templates can also consist of unique page styling --  [Think Board Mapping Page on Arbor](http://arborcollective.com/snowboards/board-mapping/ "Board Mapping Page"). 
 
 ###Lets talk about States.
 
