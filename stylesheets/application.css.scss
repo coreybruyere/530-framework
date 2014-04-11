@@ -6,81 +6,92 @@
 // ----- Contains an import section for libraries, helpers, core, layout, and components
 // ----- and a shame section for quick fixes and hacks
 
-// -------------------------------------
-//   Libraries
-// -------------------------------------
-
-// ----- Variable overrides for Bootstrap and other libraries ----- //
-// @import "libs/libs-override";
-
-
-// ----- Compass - Setup: http://compass-style.org/help/
-// ----- Run compass create on project root 
-// ----- Delete generated ie, print, and screen files  
-// ----- Update paths on config.rb ----- //
-// @import "compass";
 
 
 // -------------------------------------
-//   Helpers
+//   Utilities - Holds the grid, helpers, settings, and normalize
 // -------------------------------------
 
-// ----- Settings - @Font-Face Declarations, Variables ----- //
-@import "helpers/settings";
+// ----- Normalize ----- //
+@import "utilities/normalize";
 
-// ----- Helpers - Extends, Functions, and Mixins ----- //
-@import "helpers/helpers";
+// ----- Settings ----- //
+@import "utilities/settings";
 
+// ----- Helpers ----- //
+@import "utilities/helpers";
 
-// -------------------------------------
-//   Core
-// -------------------------------------
+// ----- Grid ----- //
+@import "utilities/grid";
 
-// ----- Reset - Normalize.css ----- //
-@import "core/normalize";
-
-// ----- Base - Base-level tags (body, p, etc.) ----- //
-@import "core/base";
-
-// ----- Typography - Fonts and Colors ----- //
-@import "core/typography";
 
 
 // -------------------------------------
-//   Layout
+//   Bits - Base level tag styling (Nav, buttons, inputs, etc.)
 // -------------------------------------
-// ----- Basic structure of main layouts. Grid is also located here ----- 
-// --- Don't style component-like pieces here. i.e. the nav --- 
 
-// ----- Grid Layout ----- //
-@import "layout/a-grid";
+// ----- Buttons ----- //
+@import "bits/buttons";
 
-// ----- Header Layout ----- //
-@import "layout/header";
+// ----- Form Elements ----- //
+@import "bits/forms";
 
-// ----- Footer Layout ----- //
-@import "layout/footer";
+// ----- Pagination - Arrows, breadcrumbs, etc. ----- //
+@import "bits/pagination";
 
-// ----- Sidebar Layout ----- //
-@import "layout/sidebar";
+// ----- Tabs - Tabs and tab active states ----- //
+@import "bits/tabs";
 
-// -------------------------------------
-//   Components
-// -------------------------------------
-// ----- Include all partials into components.scss ----- 
-// --- Build all reusable components within here --- 
+// ----- Typography - All base text styling. H1-H6, p, etc. ----- //
+@import "bits/typography";
 
-// ----- Components Import ----- //
-@import "components/all-components";
+
 
 // -------------------------------------
-//   Pages
+//   Modules - Bits combined together form modules. *REUSABLE pieces
 // -------------------------------------
-// ----- All page specific styling ----- 
-// --- Only use here if you can't use in components --- 
 
-// ----- Home page ----- //
-@import "pages/home";
+// ----- Carousel ----- //
+@import "modules/carousel";
+
+// ----- Media - Externally generated content & styles for it ----- //
+@import "modules/media";
+
+// ----- Modals ----- //
+@import "modules/modals";
+
+// ----- Navigation ----- //
+@import "modules/nav";
+
+// ----- Search Form ----- //
+@import "modules/search-form";
+
+
+
+// -------------------------------------
+//   Chunks - Groups of Modules and/or Bits to make a complex section. *NOT AS REUSABLE
+// -------------------------------------
+
+// ----- Body - Main Body wrappers used throughout site ----- //
+@import "chunks/body";
+
+// ----- Footer ----- //
+@import "chunks/footer";
+
+// ----- Header ----- //
+@import "chunks/header";
+
+// ----- Sidebar ----- //
+@import "chunks/sidebar";
+
+
+
+// -------------------------------------
+//   Templates - Templates made of Modules stitched together to form pages. *NOT REUSABLE
+// -------------------------------------
+
+// ----- RENAME THIS ----- //
+@import "chunks/custom-temp";//RENAME
 
 
 
@@ -88,3 +99,6 @@
 //   Shame 
 // -------------------------------------
 // ----- Need to add a quick fix, hack, or questionable technique?  Add it here, fix it later.
+
+
+

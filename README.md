@@ -50,7 +50,6 @@ stylesheets/
 |   ...                  # Etc… 
 |
 |- utilities/
-|   |- _base.scss        # Base-level tags 
 |   |– _grid.scss        # Grid system 
 |   |– _settings.scss    # Font Declarations, Color, Type Variables
 |   |– _helpers.scss     # Helper Classes, Mixins, Functions, Utilities
@@ -60,7 +59,7 @@ stylesheets/
 `– application.css.scss  # primary Sass file 
 ```
 
-###This template has five main ingredients.  
+###This template has six main ingredients.  
 
 ####**0.  Application.css.scss**
 - This section serves two purposes.  
@@ -81,7 +80,7 @@ Bits can also include more abstract elements like color palettes, typography and
 * ** Templates consist mostly of groups of Modules stitched together to form pages. Templates are very concrete and piece together our Bits and Modules. Templates can also consist of unique page styling --  [Think Board Mapping Page on Arbor](http://arborcollective.com/snowboards/board-mapping/ "Board Mapping Page"). 
 
 ####**5.  Utilities**
-* ** Utilities hold all Base-level tags, the grid, settings (Font Declarations, Color, Type, and Media Query Variables), helpers (Helper classes, mixins, functions, utilities), and normalize or a custom reset. 
+* ** Utilities hold all The grid, Settings (Font Declarations, Color, Type, and Media Query Variables), Helpers (Helper classes, mixins, functions, utilities), and Normalize or a custom reset. 
 
 ###Lets talk about States.
 
