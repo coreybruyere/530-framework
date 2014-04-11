@@ -1,45 +1,8 @@
 #**530 Snuggie**  
-##**An organizational template**
-
-### Style Guide Rules
-
--List @extend(s) First
-
--List "Regular" Styles Next
-
--List @include(s) Next
-
--Nested Selectors Last
-
--All Vendor Prefixes Use @mixins
-
--Maximum Nesting: Three Levels Deep
-
--Maximum Nesting: 50 Lines
-
--List Vendor/Global Dependancies First, Then Author Dependancies, Then Patterns, Then Parts
-
--Break Into As Many Small Files As Makes Sense => Use More Components
-
--Components are Named _component-name.scss
-
--In Deployment, Compile Compressed
-
--Be Generous With Comments & Use Same Comment Block Style 
-
--Variablize All Common Numbers, and Numbers with Meaning
-
--Variablize All Colors
-
--Nest and Name Your Media Queries. Nest at Bottom of Declaration
-
--Include all Hacky and Gross CSS in application.scss at Bottom in 'Shame' Section
+##**An Organizational Template**
 
 
-####[More info on style guide above](http://css-tricks.com/sass-style-guide/)
-
-
-To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
+530's Organizational Template based off of MVCSS, CSS Burrito, the GroupBuddies template, and hints of SMACSS and OOCSS. To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
 
 ####[BEM](http://bem.info/method/) - Block, Element, Modifier
 
@@ -165,6 +128,24 @@ This will create a file with some default comments, in this case named ```_examp
 * All CSS class names should use dashes instead of underscores or camel case.
 * DO NOT over-qualify selectors.  Keep specificity number as low as possible.
 * Use one discrete, comma separated selector per line in multi-selector rulesets.
+* List @extend(s) First
+* List "Regular" Styles Next
+* List @include(s) Next
+* Nested Selectors Last
+* All Vendor Prefixes Use @mixins
+* Maximum Nesting: Three Levels Deep
+* Maximum Nesting: 50 Lines
+* List Vendor/Global Dependancies First, Then Author Dependancies, Then Patterns, Then Parts
+* Break Into As Many Small Files As Makes Sense => Use More Components
+* Components are Named _component-name.scss
+* In Deployment, Compile Compressed
+* Be Generous With Comments & Use Same Comment Block Style 
+* Variablize All Common Numbers, and Numbers with Meaning
+* Variablize All Colors
+* Nest and Name Your Media Queries. Nest at Bottom of Declaration
+* Include all Hacky and Gross CSS in application.scss at Bottom in 'Shame' Section
+
+**[More info on style guide above](http://css-tricks.com/sass-style-guide/)**
 
 ####Preprocessors 
 * Do not nest deeper than 3 levels (with the exception of pseudo/hover states).
