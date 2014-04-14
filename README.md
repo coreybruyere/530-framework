@@ -50,7 +50,7 @@ stylesheets/
 |   ...                  # Etc… 
 |
 |- utilities/
-|   |– _grid.scss        # Grid system 
+|   |– _grid/index.scss  # Grid system 
 |   |– _settings.scss    # Font Declarations, Color, Type Variables
 |   |– _helpers.scss     # Helper Classes, Mixins, Functions, Utilities
 |   |– _normalize.scss   # Reset/normalize 
