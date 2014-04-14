@@ -11,7 +11,7 @@
 
 // -- REM Funciton - See Mixin
 @function parseInt($n) { /* 2 */
-  @return $n / ($n * 0 + 1); 
+  @return $n / ($n * 0 + 1);  
 }
 
 
