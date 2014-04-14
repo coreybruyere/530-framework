@@ -1,9 +1,12 @@
-// 530-framework | https://github.com/coreybruyere/530-framework
+// =====================================
+// -- 530-framework  
+// -- https://github.com/coreybruyere/530-framework
+// =====================================
 
 // -------------------------------------
 //   Application.css.scss
 // -------------------------------------
-// ----- Contains an import section for libraries, helpers, core, layout, and components
+// ----- Contains an import section for utilites, bits, modules, sections, and templates
 // ----- and a shame section for quick fixes and hacks
 
 
@@ -11,6 +14,9 @@
 // -------------------------------------
 //   Utilities - Holds the grid, helpers, settings, and normalize
 // -------------------------------------
+
+// ----- Imports ----- //
+
 
 // ----- Normalize ----- //
 @import "utilities/normalize";
@@ -22,12 +28,12 @@
 @import "utilities/helpers";
 
 // ----- Grid ----- //
-@import "utilities/grid";
+@import 'utilities/grid/index'; 
 
 
 
 // -------------------------------------
-//   Bits - Base level tag styling (Nav, buttons, inputs, etc.)
+//   Bits - Base level tag styling (Nav, buttons, inputs, etc.) *REUSABLE PIECES
 // -------------------------------------
 
 // ----- Buttons ----- //
@@ -48,7 +54,7 @@
 
 
 // -------------------------------------
-//   Modules - Bits combined together form modules. *REUSABLE pieces
+//   Modules - Bits combined together form modules. *REUSABLE LARGER PIECES
 // -------------------------------------
 
 // ----- Carousel ----- //
@@ -69,20 +75,20 @@
 
 
 // -------------------------------------
-//   Chunks - Groups of Modules and/or Bits to make a complex section. *NOT AS REUSABLE
+//   Sections - Groups of Modules and/or Bits to make a complex section. *NOT AS REUSABLE
 // -------------------------------------
 
 // ----- Body - Main Body wrappers used throughout site ----- //
-@import "chunks/body";
+@import "sections/body";
 
 // ----- Footer ----- //
-@import "chunks/footer";
+@import "sections/footer";
 
 // ----- Header ----- //
-@import "chunks/header";
+@import "sections/header";
 
 // ----- Sidebar ----- //
-@import "chunks/sidebar";
+@import "sections/sidebar";
 
 
 
@@ -91,7 +97,7 @@
 // -------------------------------------
 
 // ----- RENAME THIS ----- //
-@import "chunks/custom-temp";//RENAME
+@import "templates/custom-temp";//RENAME
 
 
 

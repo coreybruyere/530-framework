@@ -4,38 +4,6 @@
 // ----- Placeholders, Extends, Mixins, and Functions
 // -------------------------------------
 
-// -------------------------------------
-//   Placeholders
-// -------------------------------------
-
-// Image Replacement
-%ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-  /* IE 6/7 fallback */
-  *text-indent: -9999px;
-}
-
-%ir:before {    
-  content: "";
-  display: block;
-  width: 0;
-  height: 150%;
-}
-
-// Clearfix
-%clearfix, .clearfix {
-  @include clearfix();   
-}
-
-// Max Width Container 
-%maxwidth {
-  width: 100%;
-  max-width: $max-width;
-  margin: 0 auto;
-}
-
 
 // -------------------------------------
 //   Functions
@@ -141,6 +109,33 @@
     background-size: $width / 16 + rem $height / 16 + rem;
   }
 }
+
+
+// -------------------------------------
+//   Placeholders
+// -------------------------------------
+
+// Image Replacement
+%ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+%ir:before {    
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+// Clearfix
+%clearfix, .clearfix {
+  @include clearfix();   
+}
+
 
 
 // -------------------------------------
