@@ -2,7 +2,7 @@
 ##**An Organizational Template**
 
 
-530's Organizational Template based off of MVCSS, CSS Burrito, the GroupBuddies template, and hints of SMACSS and OOCSS. To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
+530's Organizational Template. Inspired by MVCSS, CSS Burrito, the GroupBuddies template, and hints of SMACSS and OOCSS. To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
 
 ####[BEM](http://bem.info/method/) - Block, Element, Modifier
 
