@@ -146,6 +146,12 @@ This will create a file with some default comments, in this case named ```_examp
 
 **[More info on style guide above](http://css-tricks.com/sass-style-guide/)**
 
+####Naming Conventions
+* **Content-layer semantics are already served by HTML** elements and other attributes.
+* **Class names impart little or no useful semantic information to** machines or human visitors unless it is part of a small set of agreed upon (and machine readable) names – Microformats.
+* **The primary purpose of a class name is to be a hook for CSS and JavaScript.** If you don’t need to add presentation and behaviour to your web documents, then you probably don’t need classes in your HTML.
+* **Class names should communicate _useful_ information to _developers_.** It’s helpful to understand what a specific class name is going to do when you read a DOM snippet, especially in multi-developer teams where front-enders won’t be the only people working with HTML components.
+
 ####Preprocessors 
 * Do not nest deeper than 3 levels (with the exception of pseudo/hover states).
 * Declare ```@extend``` followed by styles then ```@include``` statements at the end of the declaration block whenever possible.
