@@ -144,7 +144,7 @@ This will create a file with some default comments, in this case named ```_examp
 * Nest and Name Your Media Queries. Nest at Bottom of Declaration
 * Include all Hacky and Gross CSS in application.scss at Bottom in 'Shame' Section
 
-**More info on style guides =>[http://css-tricks.com/sass-style-guide/](http://css-tricks.com/sass-style-guide/)**
+**Info on style guides =>[http://css-tricks.com/sass-style-guide/](http://css-tricks.com/sass-style-guide/)**
 
 ####Naming Conventions
 * **Content-layer semantics are already served by HTML** elements and other attributes.
@@ -152,7 +152,7 @@ This will create a file with some default comments, in this case named ```_examp
 * **The primary purpose of a class name is to be a hook for CSS and JavaScript.** If you don’t need to add presentation and behaviour to your web documents, then you probably don’t need classes in your HTML.
 * **Class names should communicate _useful_ information to _developers_.** It’s helpful to understand what a specific class name is going to do when you read a DOM snippet, especially in multi-developer teams where front-enders won’t be the only people working with HTML components.
 
-**More info on naming conventions =>[http://nicolasgallagher.com/about-html-semantics-front-end-architecture/](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)**
+**Info on naming conventions =>[http://nicolasgallagher.com/about-html-semantics-front-end-architecture/](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)**
 
 ####Preprocessors 
 * Do not nest deeper than 3 levels (with the exception of pseudo/hover states).
