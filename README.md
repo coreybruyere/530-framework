@@ -67,14 +67,14 @@ stylesheets/
 * It has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
 
 ####**1.  Bits**
-* ** Bits are the basic building blocks of matter. Applied to web interfaces, Bits are our HTML tags, such as a form label, an input or a button.
+* ** Bits are the basic, smaller building blocks of matter. Applied to web interfaces, Bits are our HTML tags, such as a form label, an input or a button.
 Bits can also include more abstract elements like color palettes, typography and even more invisible aspects of an interface like animations.
 
 ####**2.  Modules**
 * ** Modules are groups of Bits combined together and are the smallest fundamental units of a compound, built for **reuse.** These Modules take on their own properties and serve as the backbone of our design system. For example, a search form.
 
 ####**3.  Sections**
-* ** Sections are groups of modules and/or bits joined together to form a relatively complex, distinct section of an interface, such as a header or a footer. This is where we declare our main, footer, header, and sidebar wrappers & containers. Sections are used to ensure wrappers and containers are consistent throughtout the whole site. These should be the first pieces that are built on a project. 
+* ** Sections are groups of modules and/or bits joined together to form a relatively complex, distinct section of an interface, such as a header or a footer. This is where we declare our main body, footer, header, and sidebar wrappers & containers. Sections are used to ensure wrappers and containers are consistent throughtout the whole site. These should be the first pieces that are built on a project. 
 
 ####**4.  Templates**
 * ** Templates consist mostly of groups of Modules stitched together to form pages. Templates are very concrete and piece together our Bits and Modules. Templates can also consist of unique page styling --  [Think Board Mapping Page on Arbor](http://arborcollective.com/snowboards/board-mapping/ "Board Mapping Page"). 
@@ -144,13 +144,15 @@ This will create a file with some default comments, in this case named ```_examp
 * Nest and Name Your Media Queries. Nest at Bottom of Declaration
 * Include all Hacky and Gross CSS in application.scss at Bottom in 'Shame' Section
 
-**[More info on style guide above](http://css-tricks.com/sass-style-guide/)**
+**More info on style guides =>[http://css-tricks.com/sass-style-guide/](http://css-tricks.com/sass-style-guide/)**
 
 ####Naming Conventions
 * **Content-layer semantics are already served by HTML** elements and other attributes.
 * **Class names impart little or no useful semantic information to** machines or human visitors unless it is part of a small set of agreed upon (and machine readable) names – Microformats.
 * **The primary purpose of a class name is to be a hook for CSS and JavaScript.** If you don’t need to add presentation and behaviour to your web documents, then you probably don’t need classes in your HTML.
 * **Class names should communicate _useful_ information to _developers_.** It’s helpful to understand what a specific class name is going to do when you read a DOM snippet, especially in multi-developer teams where front-enders won’t be the only people working with HTML components.
+
+**More info on naming conventions =>[http://nicolasgallagher.com/about-html-semantics-front-end-architecture/](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)**
 
 ####Preprocessors 
 * Do not nest deeper than 3 levels (with the exception of pseudo/hover states).
