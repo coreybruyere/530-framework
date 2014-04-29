@@ -169,7 +169,7 @@ This will create a file with some default comments, in this case named ```_examp
             display: inline-block;
         }
 
-        // -- module--alt
+        /* -- module--alt */
         &--alt {
             @extend .module;
             color: green;
