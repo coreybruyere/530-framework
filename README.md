@@ -157,7 +157,7 @@ This will create a file with some default comments, in this case named ```_examp
         color: red;
     }
 .no-dent {
-  color: blue;
+  color: blue; 
 }
 ```
 
