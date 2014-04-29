@@ -153,8 +153,16 @@ This will create a file with some default comments, in this case named ```_examp
 
 ####Style Guide Example
 ```css
-    .block {
+    .module {
+        @extend %clearfix;
+        width: 100%;
         color: red;
+        @include mixin;
+        // ----- Min Width @ $tablet ----- //
+        @include min-breakpoint($tablet) {
+            width: 25%;
+        }
+        // -- .module__item
     }
 .no-dent {
   color: blue; 
