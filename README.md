@@ -159,7 +159,7 @@ This will create a file with some default comments, in this case named ```_examp
         color: red;
         @include mixin;
 
-        // ----- Min Width @ $tablet ----- //
+        /* -- Min Width @ $tablet */
         @include min-breakpoint($tablet) {
             width: 25%;
         }
@@ -182,8 +182,22 @@ This will create a file with some default comments, in this case named ```_examp
 * **Class names impart little or no useful semantic information to** machines or human visitors unless it is part of a small set of agreed upon (and machine readable) names – Microformats.
 * **The primary purpose of a class name is to be a hook for CSS (Use ID's for JS on unique selectors. Prefix all JS hooks with 'js-').** If you don’t need to add presentation and behaviour to your web documents, then you probably don’t need classes in your HTML.
 * **Class names should communicate _useful_ information to _developers_.** It’s helpful to understand what a specific class name is going to do when you read a DOM snippet, especially in multi-developer teams where front-enders won’t be the only people working with HTML components.
+* Class names are named using adjectives and nouns. 
 
 **Info on naming => [http://nicolasgallagher.com/about-html-semantics-front-end-architecture/](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)**
+
+####BEM Syntax Naming
+```css
+    /* -- Block Noun */
+    .person {}
+
+    /* -- Element Noun__Noun */
+    .person__hand{}
+
+    /* -- Modifier Noun_Noun--Adjective */
+    .person__hand--left{}
+```
+**Info on BEM Syntax => [http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)**
 
 ####Preprocessors 
 * Do not nest deeper than 3 levels (with the exception of pseudo/hover states).
