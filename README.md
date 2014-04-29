@@ -151,7 +151,7 @@ This will create a file with some default comments, in this case named ```_examp
 
 **Info on style guides => [http://css-tricks.com/sass-style-guide/](http://css-tricks.com/sass-style-guide/)**
 
-####Style Guide Example
+####Styleguide Example
 ```css
     .module {
         @extend %clearfix;
@@ -186,7 +186,7 @@ This will create a file with some default comments, in this case named ```_examp
 
 **Info on naming => [http://nicolasgallagher.com/about-html-semantics-front-end-architecture/](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)**
 
-####BEM Syntax Naming
+####Naming Example
 ```css
     /* -- Block Noun */
     .person {}
