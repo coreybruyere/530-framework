@@ -2,7 +2,7 @@
 ##**An Organizational Template**
 
 
-530's Organizational Template. Inspired by MVCSS, CSS Burrito, the GroupBuddies template, and hints of SMACSS and OOCSS. To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
+530's Organizational Template. Inspired by MVCSS, CSS Burrito, the GroupBuddies template, and hints of SMACSS and OOCSS. This template follows the BEM syntax too. To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
 
 ####[BEM](http://bem.info/method/) - Block, Element, Modifier
 
@@ -27,6 +27,7 @@
 stylesheets/ 
 |
 |– bits/ 
+|   |- _base.scss        # Base styles for those other lonely tags that don't have their own partial
 |   |– _buttons.scss     # Base styles for buttons
 |   |– _forms.scss       # Base styles for all Form elements (inputs, checkboxes, etc.)
 |   ...                  # Etc… 
@@ -120,7 +121,7 @@ From here, in the command line, you can type
 
 This will create a file with some default comments, in this case named ```_example-module.scss``` and import it into the main ```_modules.scss``` file for you.  
  -->
-##Suggested Styleguide
+##Styleguide
 
 ####General Styling  
 * Avoid using ID's.  Use classes instead.
@@ -136,15 +137,29 @@ This will create a file with some default comments, in this case named ```_examp
 * Maximum Nesting: 50 Lines
 * List Vendor/Global Dependancies First, Then Author Dependancies, Then Patterns, Then Parts
 * Break Into As Many Small Files As Makes Sense => Use More Components
-* Components are Named _component-name.scss
+* Modules are Named _module.scss
 * In Deployment, Compile Compressed
-* Be Generous With Comments & Use Same Comment Block Style 
-* Variablize All Common Numbers, and Numbers with Meaning
-* Variablize All Colors
-* Nest and Name Your Media Queries. Nest at Bottom of Declaration
+* Be Generous With Comments & Use Same Comment Block Style => "// -- Comment Text"
+* Variablize All Colors,Common Numbers, and Numbers with Meaning
+* List Base Class and Declaration Block First
+* Nest All Pseduo-Classes Directly Beneath Base Properties and Values
+* Media Queries Belong Right After Pseudo-Classes
+* List Tags Next. But Remember, We Should be Following the BEM Sytax So Those Should Be In Base. 
+* List any Class Elements Next, in BEM Syntax of Course.
+* List any Class Modifiers at the End of the Declaration Block
 * Include all Hacky and Gross CSS in application.scss at Bottom in 'Shame' Section
 
 **Info on style guides => [http://css-tricks.com/sass-style-guide/](http://css-tricks.com/sass-style-guide/)**
+
+####Style Guide Example
+```css
+    .block {
+        color: red;
+    }
+.no-dent {
+  color: blue;
+}
+```
 
 ####Naming Conventions
 * **Content-layer semantics are already served by HTML** elements and other attributes.
