@@ -158,15 +158,23 @@ This will create a file with some default comments, in this case named ```_examp
         width: 100%;
         color: red;
         @include mixin;
+
         // ----- Min Width @ $tablet ----- //
         @include min-breakpoint($tablet) {
             width: 25%;
         }
-        // -- .module__item
+
+        // -- module__item
+        &__item {
+            display: inline-block;
+        }
+        
+        // -- module--alt
+        &--alt {
+            @extend .module;
+            color: green;
+        }
     }
-.no-dent {
-  color: blue; 
-}
 ```
 
 ####Naming Conventions
