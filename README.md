@@ -1,6 +1,6 @@
-#**530 Snuggie - An Organizational Template**  
+#**Snuggie - An Organizational Template**  
 
-530's Organizational Template. Inspired by MVCSS, CSS Burrito, the GroupBuddies template, and hints of SMACSS and OOCSS. This template follows the BEM syntax too. To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
+530medialab's Organizational Template. Inspired by MVCSS, CSS Burrito, the GroupBuddies template, and hints of SMACSS and OOCSS. This template follows the BEM syntax and uses SASS. To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
 
 ####[BEM](http://bem.info/method/) - Block, Element, Modifier
 
@@ -79,7 +79,7 @@ Bits can also include more abstract elements like color palettes, typography and
 * ** Templates consist mostly of groups of Modules stitched together to form pages. Templates are very concrete and piece together our Bits and Modules. Templates can also consist of unique page styling --  [Think Board Mapping Page on Arbor](http://arborcollective.com/snowboards/board-mapping/ "Board Mapping Page"). 
 
 ####**5.  Utilities**
-* ** Utilities hold all The grid, Settings (Font Declarations, Color, Type, and Media Query Variables), Helpers (Helper classes, mixins, functions, utilities), and Normalize or a custom reset. 
+* ** Utilities hold the Grid, Settings (Font Declarations, Color, Type, and Media Query Variables), Helpers (Helper classes, mixins, functions, utilities), and Normalize, or a custom reset. 
 
 ###Lets talk about States.
 
