@@ -200,7 +200,7 @@ This will create a file with some default comments, in this case named ```_examp
 **Info on BEM Syntax => [http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)**
 
 ####Commenting/Snippets
-* **Throw this snippet in your Emmet Sublime User Settings to enable some quick keyboard shortcuts
+Throw this snippet in your Emmet Sublime User Settings to enable some quick keyboard shortcuts
 ```json
 {
   "snippets": {
