@@ -1,6 +1,4 @@
-#**530 Snuggie**  
-##**An Organizational Template**
-
+#**530 Snuggie - An Organizational Template**  
 
 530's Organizational Template. Inspired by MVCSS, CSS Burrito, the GroupBuddies template, and hints of SMACSS and OOCSS. This template follows the BEM syntax too. To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
 
@@ -22,7 +20,7 @@
 
 ####[MVCSS] (http://mvcss.github.io/) - A Sass based CSS architecture and style guide.  
 
-###What's in this project?
+##**What's in this project?**
 ```
 stylesheets/ 
 |
