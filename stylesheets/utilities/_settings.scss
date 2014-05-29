@@ -11,28 +11,31 @@
 @charset "UTF-8";
 
 
-
 // -------------------------------------
 //   Variables
 // -------------------------------------
 
-// ----- Colors ----- //
-
-//$link-color:        #;
-//$link-hover:        #;  
+// -- Colors 
 
 $black:             #000;
 $white:             #fff;
 
-//$primary:           #;
-//$secondary:         #;
+//$primary:         #;
+//$primary-light:   #;
+//$secondary:       #;
+//$secondary-light: #;
 
 $alert-yellow:      #ebe16f;
 $alert-red:         #fbe3e4;
 $alert-green:       #e6efc2;
 $alert-blue:        #d5edf8;
 
-// ----- Type ----- //
+//$link-color:      #;
+//$link-hover:      #;
+//$text-color:      #;  
+
+
+// -- Type 
 
 $sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
@@ -40,6 +43,14 @@ $reg-font:          "";
 $bold-font:         "";
 $italic-font:       "";
 
-// ----- Grid ----- //
 
-//$max-width:         #;
+// -- Media Queries
+
+$max-width:         1220;
+
+$small-mobile:      480;
+$medium-mobile:     700;
+$tablet:            900;
+$small-desktop:     1042;
+$desktop:           $max-width;
+$large-desktop:     1400;

@@ -199,6 +199,32 @@ This will create a file with some default comments, in this case named ```_examp
 ```
 **Info on BEM Syntax => [http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)**
 
+####Commenting/Snippets
+* **Throw this snippet in your Emmet Sublime User Settings to enable some quick keyboard shortcuts
+```json
+{
+  "snippets": {
+    "html": {
+      "abbreviations": {
+        "example": "<div class='example' title='Custom element example'>"
+      },
+      "snippets": {
+        "pict": "<picture>\n\t<source media='(min-width: 64em)' src='high-res.jpg'>\n\t<source media='(min-width: 37.5em)' src='med-res.jpg'>\n\t<source src='low-res.jpg'>\n\t<img src='fallback.jpg' alt=' '>\n</picture>"
+      }
+    },
+    "css": {
+      "snippets": {
+        "mq+": "// -- Max Width @ ${1:width}\n@include max-breakpoint(${1:width}) {\n|\n}",
+        "mq-": "// -- Min Width @ ${1:width}\n@include min-breakpoint(${1:width}) {\n|\n}",
+        "com": "// -------------------------------------\n//   ${1:Comment Name} \n// -------------------------------------",
+        "scom": "// -- ${1:Small Comment}"
+      }
+    }
+  }
+}
+```
+**Custom snippets definitions => [https://github.com/emmetio/emmet/blob/master/snippets.json](https://github.com/emmetio/emmet/blob/master/snippets.json)**
+
 ####Preprocessors 
 * Do not nest deeper than 3 levels (with the exception of pseudo/hover states).
 * Declare ```@extend``` followed by styles then ```@include``` statements at the end of the declaration block whenever possible.

@@ -36,8 +36,14 @@
 //   Bits - Base level tag styling (Nav, buttons, inputs, etc.) *REUSABLE PIECES
 // -------------------------------------
 
+// ----- Base ----- //
+@import "bits/base";
+
 // ----- Buttons ----- //
 @import "bits/buttons";
+
+// ----- Lists ----- //
+@import "bits/lists";
 
 // ----- Form Elements ----- //
 @import "bits/forms";
@@ -56,12 +62,6 @@
 // -------------------------------------
 //   Modules - Bits combined together form modules. *REUSABLE LARGER PIECES
 // -------------------------------------
-
-// ----- Base ----- //
-@import "modules/base";
-
-// ----- Lists ----- //
-@import "modules/lists";
 
 // ----- Carousel ----- //
 @import "modules/carousel";
@@ -103,7 +103,7 @@
 // -------------------------------------
 
 // ----- RENAME THIS ----- //
-@import "templates/custom-temp";//RENAME
+@import "templates/custom-temp"; //RENAME
 
 
 
