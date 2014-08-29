@@ -116,6 +116,7 @@ This template should feel intuitive and easy to use.  The goal is to keep everyt
 * Read more about BEM below in Naming Conventions
 * DO NOT over-qualify selectors.  Keep specificity number as low as possible
 * Use one discrete, comma separated selector per line in multi-selector rulesets
+* Order of CSS properties: Positioning, Display & Box Model, Color, Text, Other
 * List @extend(s) first
 * List "regular" styles next
 * List @include(s) next
