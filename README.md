@@ -31,8 +31,6 @@ stylesheets/
 |   |– _lists.scss          # Base styles for OL's, UL's, LI's, and list classes
 |   |– _pagination.scss     # Base styles pagination arrows, numbers, etc.
 |   |– _tables.scss         # Base styles tables, tbody, thead, tr, td, and table classes
-|   |– _tabs.scss           # Base styles for tabs
-|   |– _tooltips.scss       # Base styles for tooltips 
 |   |– _typography.scss     # Base styles for headings, paragraphs, or any global type classes
 | 
 |– modules/ 
@@ -45,6 +43,8 @@ stylesheets/
 |   |– _product.scss        # Product
 |   |– _touts.scss          # Touts
 |   |- _flags.scss          # Flags 
+|   |– _tabs.scss           # Tabs
+|   |– _tooltips.scss       # Tooltips
 |
 |– sections/ 
 |   |– _header.scss         # Header 
