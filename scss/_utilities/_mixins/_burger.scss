@@ -7,9 +7,9 @@
  */
 
 
-/**
- * Burger
- */
+
+// -- Burger
+
 
 @mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 3px, $transition-duration: .3s) {
     $burger-height: $height !global;
@@ -55,9 +55,7 @@
 }
 
 
-/**
- * Select parts of the burger
- */
+// -- Select parts of the burger
 
 @mixin burger-parts {
     &, &:before, &:after {
@@ -84,9 +82,7 @@
 }
 
 
-/**
- * Burger animations
- */
+// -- Burger animations
 
 @mixin burger-to-cross {
     & {

@@ -22,62 +22,6 @@ input, select, textarea {
 	}
 }
 
-input {
-	&:focus { 
-
-	}
-}
-
-// -- Custom Select
-.select-style {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.select-style select {
-  padding: u(rem(8));
-  padding-right: u(rem(32));	
-  font-size: inherit; 
-  border: 0;
-  margin: 0;
-  border-radius: u(rem(3));
-  text-indent: 0.01px;
-  text-overflow: '';
-  -webkit-appearance: button; 
-}
-
-.select-style::before,
-.select-style::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-}
-
-.select-style::after { 
-  content: "\25BC";
-  right: u(rem(7));
-  top: 50%;
-  height: u(rem(8));
-  margin-top: u(rem(-8));
-  line-height: 1;  
-}
-
-.select-style::before { 
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: u(rem(2));
-  border-radius: 0 u(rem(3)) u(rem(3)) 0;
-}
-
-.select-style select[disabled] {
-  color: rgba(0,0,0,.3);
-}
-
-.select-style select[disabled]::after {
-  color: rgba(0,0,0,.1);
-}
 
 
 

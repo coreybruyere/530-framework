@@ -26,13 +26,12 @@ img {
 }
 
 hr { 
-	height: u(rem(3));                   
+	height: u(rem(1));                   
 	background-color: $tertiary;
 	border: 0;  
 }
 
 blockquote {
-  // @extend %section; 
   margin-right: u(rem(20));
   margin-left: u(rem(20));
   padding-left: u(rem(20));

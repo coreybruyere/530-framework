@@ -4,80 +4,10 @@
 // ----- Header Layout Styles - Nav items should be styled in nav.scss
 // -------------------------------------
 
-.header[role="banner"] {
-	@extend %clearfix;
-	@extend .wrapper;
-	position: relative;
-	padding-top: u(rem($padding));
-	padding-bottom: u(rem($padding));
-}
-
-.header__group {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	padding: u(rem($padding));
-	padding-right: u(rem(10));
-	// -- Min Width @ $tablet
-	@media #{$tablet} {
-		padding-right: u(rem(20));
-	}
-}
-
-.header__button {
-	border: 0;
-	padding: 0;
-	background-color: transparent;
-	&:hover, &:active {
-		background-color: transparent;
-	}
-}
-
-.header__search {
-	display: inline-block;
-	width: u(rem(24));
-	height: u(rem(24));
-	vertical-align: bottom; 
-}
-
-.header__burger {
-	display: inline-block;
-	margin-left: u(rem(10));
-	cursor: pointer;
-	z-index: 1001;
-	vertical-align: text-bottom;
-	// -- Min Width @ $tablet
-	@media #{$tablet} {
-		display: none;
-	}
-}
-
-.header__burger-icon {
-	@include burger();  
-}
-
-.header__logo {
-	display: inline-block;
-	vertical-align: bottom;
-}
-
+header[role="banner"] {}
 
  
 
 // -------------------------------------
 //   States 
 // -------------------------------------
-
-.is-active-icon {
-	@include burger-to-cross;  
-}
-
-.is-active-burger {
-	position: fixed;
-	top: u(rem(118));
-	right: 0;
-	padding: u(rem(13)) u(rem(10)) u(rem(13)) u(rem(5));
-	border-top-left-radius: u(rem($border-radius));
-	border-bottom-left-radius: u(rem($border-radius));
-	background-color: $white;
-}

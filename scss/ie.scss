@@ -4,7 +4,7 @@
 // =====================================
 
 // -------------------------------------
-//   ie.scss 
+//   main.scss 
 // -------------------------------------
 // ----- Contains an import section for  
 // ----- utilites, vendors, bits, modules, sections, and templates.
@@ -14,19 +14,9 @@
 //   Config
 // -------------------------------------
  
-$old-ie: true; 
+$old-ie: true;
 $px-only: true;
-
-// -------------------------------------
-//   Utilities - Holds the grid, helpers, settings, functions, mixins, and animations
-// -------------------------------------
-// ----- Settings ----- //
-// @import "_utilities/_settings"; 
-
-// ----- All Utilities ----- // 
-@import "_utilities/utilities";
-
-
+ 
 
 // -------------------------------------
 //   Vendors - All Vendor CSS and SCSS
@@ -34,6 +24,14 @@ $px-only: true;
 
 // ----- All Vendors ----- //
 @import "_vendor/vendor";
+
+
+// -------------------------------------
+//   Utilities - Holds the grid, helpers, settings, functions, mixins, and animations
+// -------------------------------------
+
+// ----- All Utilities ----- //
+@import "_utilities/utilities";  
 
 
 // -------------------------------------
