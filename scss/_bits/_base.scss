@@ -1,0 +1,54 @@
+// -------------------------------------
+//   Base 
+// -------------------------------------
+// ----- Custom Reset
+// -------------------------------------
+
+*, *:before, *:after {  
+  box-sizing: border-box;  
+} 
+
+html {
+  font-family: $sans-serif;  
+}
+ 
+body { 
+  color: $primary;    
+  font-family: inherit;  
+  font-size: 16px; 
+  font-weight: 400; 
+  line-height: 1.25; 
+  // -webkit-font-smoothing: antialiased;
+}
+
+img {
+	@extend .img--responsive;   
+}
+
+hr { 
+	height: u(rem(3));                   
+	background-color: $tertiary;
+	border: 0;  
+}
+
+blockquote {
+  // @extend %section; 
+  margin-right: u(rem(20));
+  margin-left: u(rem(20));
+  padding-left: u(rem(20));
+  border-left: u(rem(5)) solid $tertiary;
+}
+
+
+// -------------------------------------
+//   States -- ARIA states
+// -------------------------------------
+
+[aria-hidden="true"] {
+  display: none !important;
+}
+
+[aria-hidden="false"] {
+  display: block !important;
+}
+

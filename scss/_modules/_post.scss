@@ -1,0 +1,40 @@
+// -------------------------------------
+//   Posts Module
+// -------------------------------------
+// ----- Styles for Posts, post excerpts, etc.
+// -------------------------------------
+
+.post {}
+
+.post__item {}
+
+.post__meta {}
+
+.post--excerpt {
+	@extend %section;
+}
+
+.post--excerpt__item {
+	padding-bottom: u(rem(30));
+	margin-top: u(rem(20));
+	border-bottom: u(rem(1)) solid $secondary-lighter;
+	&:first-of-type { 
+		margin-top: 0;
+	}
+}
+
+.post--excerpt__meta { 
+	display: block;
+	margin: u(rem(5)) 0 u(rem(10));
+	color: $secondary-light; 
+}
+
+.post--excerpt__title {
+	margin: 0;
+	@include font-size(20);
+}
+
+
+// -------------------------------------
+//   States
+// -------------------------------------

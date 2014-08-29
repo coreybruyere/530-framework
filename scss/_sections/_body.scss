@@ -1,0 +1,77 @@
+// -------------------------------------
+//   Body Wrappers
+// -------------------------------------
+// ----- Body Layout Styles
+// -------------------------------------
+
+%section {
+	margin-top: u(rem($margin-top));
+	margin-bottom: u(rem($margin-bottom));  
+}
+
+%wrapper {
+	@include center( u(rem(1024)), u(rem(10)) );
+	// -- Min Width @ $tablet
+	@media #{$tablet} {
+		@include center( u(rem(1024)), u(rem(20)) );
+	}
+}
+
+main[role="main"] {
+	@extend %wrapper;
+}
+
+aside[role="complementary"] {
+	
+}
+
+section[role="main"] { 
+	@extend %section;
+}
+
+section[role="region"] {
+	@extend %section;
+}
+
+.section {
+	@extend %section;
+}
+
+.wrapper {
+	@extend %wrapper;
+}
+
+.wrapper--body {
+	position: relative;
+}
+
+
+
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.is-active-body {
+	&:after {
+		content: '';
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 10;
+		height: 100%;
+		background-color: $black;
+		opacity: .75;
+		// -- Min Width @ $tablet
+		@media #{$tablet} {
+			display: none;
+		}
+	}
+}
+
+
+

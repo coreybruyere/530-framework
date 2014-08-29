@@ -1,0 +1,88 @@
+// -------------------------------------
+//   Settings
+// -------------------------------------
+// ----- @Font-Face Declarations, Variables
+// -------------------------------------
+
+// -------------------------------------
+//   @font-face
+// -------------------------------------
+
+@charset "UTF-8";
+
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// -- Layout
+
+$padding: 			15;
+$margin-top:        25;
+$margin-bottom:     45;
+$border-radius:     3;
+
+// -- Colors 
+
+$black:             #000;
+$white:             #fff;
+$red:				#fbe3e4;
+$yellow:			#F4B350;
+$green:				#26A65B;
+$blue:				#2c3e50;
+
+$primary:         	$blue;
+$primary-light:   	lighten($primary, 15%);
+$primary-lighter:   lighten($primary, 45%);
+$secondary:       	$black;
+$secondary-light: 	lighten($secondary, 45%);
+$secondary-lighter: lighten($secondary, 85%);
+$tertiary:			$yellow;
+$tertiary-light:	lighten($tertiary, 15%);
+
+$alert-yellow:      $yellow;
+$alert-red:         $red;
+$alert-green:       $green;
+$alert-blue:        $blue;
+
+$link-color:      	$primary;
+$link-hover:      	$primary-light;
+$text-color:      	$primary;
+
+
+// -- Type 
+
+$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$reg-font:          "";
+$bold-font:         "";
+$italic-font:       "";
+
+
+// -- Folders
+
+$images :           "../../images/";
+
+
+
+// -- Breakpoints
+$baby:     u(rem(321)) !default;
+$mama:     u(rem(500)) !default;
+$uncle:    u(rem(700)) !default;
+$papa:     u(rem(800)) !default;
+$grandma:  u(rem(1200)) !default;
+$grandpa:  u(rem(1600)) !default;
+
+
+// -- Media Queries
+$screen: "only screen" !default;
+$small-mobile: "only screen and (min-width:"#{$baby}")" !default;
+$mobile: "only screen and (min-width:"#{$mama}")" !default;
+$tablet: "only screen and (min-width:"#{$uncle}")" !default;
+$small-desktop: "only screen and (min-width:"#{$papa}")" !default;
+$desktop: "only screen and (min-width:"#{$grandma}")" !default;
+$large-desktop: "only screen and (min-width:"#{$grandpa}")" !default;
+$landscape: "only screen and (orientation: landscape)" !default;
+$portrait: "only screen and (orientation: portrait)" !default;
+
+

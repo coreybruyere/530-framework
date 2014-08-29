@@ -1,0 +1,68 @@
+// -------------------------------------
+//   Navigation Modules
+// -------------------------------------
+// ----- Styles for Navigations
+// -------------------------------------
+
+.nav[role="navigation"] {
+	position: fixed;
+	left: u(rem(-260));
+	top: 0;
+	display: block;
+	width: u(rem(260));
+	max-height: 0;
+	overflow: hidden;
+	text-align: left;
+  	transition: all .5s ease-in-out;
+	// -- Min Width @ $tablet
+	@media #{$tablet} {
+		position: static;
+		display: inline-block;
+		width: auto;
+		max-height: none;
+		overflow: visible;
+	}
+}
+
+.nav[role="menu"] { 
+	
+}
+
+.nav__item {
+	display: block;
+	padding: u(rem(30)) u(rem(30)) 0;
+	line-height: .85;
+	vertical-align: bottom;
+	color: $white;
+	// -- Min Width @ $tablet
+	@media #{$tablet} {
+		display: inline-block;
+		padding: 0 u(rem(10));
+		color: $link-color;
+	}
+}
+
+.nav__link {
+	color: $white;
+	// -- Min Width @ $tablet
+	@media #{$tablet} {
+		color: inherit;
+	}
+}
+
+ 
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.is-active-nav {
+	left: 0 !important;
+	max-height: none !important;
+	height: 100%;
+	background-color: $secondary-light;
+	z-index: 1000;
+	// -- Min Width @ $tablet
+	@media #{$tablet} {
+		background-color: transparent;
+	}
+}

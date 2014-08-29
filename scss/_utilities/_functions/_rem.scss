@@ -1,0 +1,8 @@
+// PIXELS TO REMS
+// $target: the desired font size for the element
+// $parent: the targets parent element font size (default: 16)
+//------------------------------------------
+
+@function rem($target, $context: 16) {
+  @return ($target / $context)+0rem;
+}

@@ -1,0 +1,98 @@
+// -------------------------------------
+//   Tab Module
+// -------------------------------------
+// ----- Styles for Tab module
+// -------------------------------------
+
+.tab {
+	@extend %clearfix;
+	@extend %section;
+}
+
+.tab__list {
+	@extend %clearfix;
+	display: none;
+	// -- Min Width @ $tablet
+	@media #{$tablet} {
+		display: block;
+	}
+}
+
+.tab__item {
+	position: relative;
+	bottom: u(rem(-2));
+	padding: u(rem(5)) u(rem($padding));
+	margin-right: u(rem(5));
+	float: left;
+	border: u(rem(2)) solid $secondary-lighter;
+	border-bottom: 0;
+	border-top-left-radius: u(rem($border-radius));
+	border-top-right-radius: u(rem($border-radius));
+	background-color: transparent; 
+	color: $primary-light;
+  	transition: all .5s ease-in-out;
+	cursor: pointer;
+	&:hover, &:active {
+		background-color: $secondary-lighter;
+	}
+}
+
+.tab__item--drawer {
+	@extend .tab__item;
+	top: 0;
+	float: none;
+	margin: u(rem(10)) 0 0;
+	border: 0;
+	background-color: $secondary-lighter;
+	&:first-of-type {
+		margin-top: 0;
+	}
+	&:hover, &:active {
+		background-color: $secondary-light;
+		color: $secondary-lighter;
+	}
+	// -- Min Width @ $tablet
+	@media #{$tablet} {
+		display: none;
+	}
+}
+
+.tab__panel {
+	// border-radius: u(rem($border-radius));
+	// -- Min Width @ $tablet
+	@media #{$tablet} {
+		border: u(rem(2)) solid $secondary-lighter;
+		// border-top-left-radius: 0;
+		background-color: $secondary-lighter;
+	}
+}
+
+.tab__article {
+	padding: u(rem($padding));
+	overflow: hidden;
+	background-color: lighten($secondary-lighter, 10%);
+	@include fadeIn;
+	// -- Min Width @ $tablet
+	@media #{$tablet} {
+		background-color: $secondary-lighter;
+	}
+}
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.is-active-tab {
+	top: 0;
+	background-color: $secondary-light;
+	color: $white;
+	// -- Min Width @ $tablet
+	@media #{$tablet} {
+		background-color: $secondary-lighter;
+		color: $primary;
+	}
+}
+
+
+

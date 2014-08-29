@@ -1,0 +1,41 @@
+// -------------------------------------
+//   Modal Modules
+// -------------------------------------
+// ----- Styles for Modals
+// -------------------------------------
+
+.modal {
+	@extend %clearfix;
+	display: block; 
+	padding: u(rem(10)); 
+	background-color: $tertiary;
+	color: $primary;
+	// -- Min Width @ $tablet
+	@media #{$tablet} {
+		padding: u(rem(10)) u(rem(20));
+	}
+}
+
+.modal__icon {
+	@extend .icon-svg;
+	width: u(rem(18));
+	height: u(rem(18)); 
+	fill: $primary;  
+}
+
+.modal__dismiss {
+	float: right;
+	cursor: pointer;
+}
+
+
+
+
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.is-active-modal {
+
+}

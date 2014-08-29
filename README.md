@@ -25,49 +25,64 @@
 stylesheets/ 
 |
 |– bits/ 
-|   |- _base.scss        # Base styles for those other lonely tags that don't have their own partial
-|   |– _buttons.scss     # Base styles for buttons
-|   |– _forms.scss       # Base styles for all Form elements (inputs, checkboxes, etc.)
-|   ...                  # Etc… 
+|   |- _base.scss           # Base styles for lonely tags that don't have their own partial
+|   |– _buttons.scss        # Base styles for buttons
+|   |– _forms.scss          # Base styles for all Form elements (inputs, checkboxes, etc.)
+|   |– _lists.scss          # Base styles for OL's, UL's, LI's, and list classes
+|   |– _pagination.scss     # Base styles pagination arrows, numbers, etc.
+|   |– _tables.scss         # Base styles tables, tbody, thead, tr, td, and table classes
+|   |– _tabs.scss           # Base styles for tabs
+|   |– _tooltips.scss       # Base styles for tooltips 
+|   |– _typography.scss     # Base styles for headings, paragraphs, or any global type classes
 | 
 |– modules/ 
-|   |– _carousel.scss    # Carousel 
-|   |– _media.scss       # Media (Video, Ig, Externally generated content)
-|   |– _nav.scss         # Navigation 
-|   |– _search-form.scss # Forms 
-|   ...                  # Etc… 
+|   |– _carousel.scss       # Carousel 
+|   |– _media.scss          # Media 
+|   |– _nav.scss            # Navigation 
+|   |– _search-form.scss    # Forms 
+|   |– _modals.scss         # Modals
+|   |– _post.scss           # Post
+|   |– _product.scss        # Product
+|   |– _touts.scss          # Touts
+|   |- _flags.scss          # Flags 
 |
 |– sections/ 
-|   |– _header.scss      # Header 
-|   |– _footer.scss      # Footer 
-|   |– _sidebar.scss     # Sidebar 
-|   |– _body.scss        # Body 
-|   ...                  # Etc… 
+|   |– _header.scss         # Header 
+|   |– _footer.scss         # Footer 
+|   |– _sidebar.scss        # Sidebar 
+|   |– _body.scss           # Body 
+|   ...                     # Etc… 
 |
 |– templates/ 
-|   |– _custom-temp.scss # Header 
-|   ...                  # Etc… 
+|   |– _custom-temp.scss    # Custom Template -- If needed
+|   ...                     # Etc… 
 |
 |- utilities/
-|   |– _grid/index.scss  # Grid system 
-|   |– _settings.scss    # Font Declarations, Color, Type Variables
-|   |– _helpers.scss     # Helper Classes, Mixins, Functions, Utilities
-|   |– _normalize.scss   # Reset/normalize 
-|   ...                  # Etc… 
+|   |– _animations/animate  # Animations
+|   |– _functions/functions # Functions 
+|   |– _grid/index.scss     # Grid system
+|   |– _mixins/mixins       # Mixins
+|   |– _helpers             # Helper Classes
+|   |– _settings.scss       # Font Declarations, Colors, Type Variables
 | 
-`– application.css.scss  # primary Sass file 
+|- vendors/
+|   |– normalize            # Normalize
+|   ...                     # Vendor css
+|
+`– main.scss     # primary Sass file 
+`– ie.scss       # ie Sass file for ie 8 and down
 ```
 
-###This template has six main ingredients.  
+###This template has seven main ingredients.  
 
-####**0.  Application.css.scss**
+####**0.  main.scss / ie.scss **
 - This section serves two purposes.  
 * It imports all files from each folder.  
-* It has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later.
+* It has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later. Included at the top of each of these files are variables that allow for ie specific compiling. 
 
 ####**1.  Bits**
 * ** Bits are the basic, smaller building blocks of matter. Applied to web interfaces, Bits are our HTML tags, such as a form label, an input or a button.
-Bits can also include more abstract elements like color palettes, typography and even more invisible aspects of an interface like animations.
+Bits can also include more abstract elements like color palettes, typography and more.
 
 ####**2.  Modules**
 * ** Modules are groups of Bits combined together and are the smallest fundamental units of a compound, built for **reuse.** These Modules take on their own properties and serve as the backbone of our design system. For example, a search form.
@@ -79,7 +94,10 @@ Bits can also include more abstract elements like color palettes, typography and
 * ** Templates consist mostly of groups of Modules stitched together to form pages. Templates are very concrete and piece together our Bits and Modules. Templates can also consist of unique page styling --  [Think Board Mapping Page on Arbor](http://arborcollective.com/snowboards/board-mapping/ "Board Mapping Page"). 
 
 ####**5.  Utilities**
-* ** Utilities hold the Grid, Settings (Font Declarations, Color, Type, and Media Query Variables), Helpers (Helper classes, mixins, functions, utilities), and Normalize, or a custom reset. 
+* ** Utilities hold the Grid, Animations functions, Settings (Font Declarations, Color, Type, and Media Query Variables), Helpers (Helper classes, mixins, functions, utilities), and Normalize, or a custom reset. 
+
+####**7.  Vendors**
+* ** All Vendor CSS and/or SASS goes here. Along with normalize.css.
 
 ###Lets talk about States.
 
@@ -123,16 +141,17 @@ This will create a file with some default comments, in this case named ```_examp
 
 ####General Styling  
 * Avoid using ID's.  Use classes instead.
-* All CSS class names should use dashes instead of underscores or camel case.
+* All CSS class names should use BEM syntax with double underscore and double dash.
+* Read more about BEM below in Naming Conventions
 * DO NOT over-qualify selectors.  Keep specificity number as low as possible.
 * Use one discrete, comma separated selector per line in multi-selector rulesets.
 * List @extend(s) First
 * List "Regular" Styles Next
 * List @include(s) Next
-* Nested Selectors Last
-* All Vendor Prefixes Use @mixins
-* Maximum Nesting: Three Levels Deep
-* Maximum Nesting: 50 Lines
+* Try not to Nest! 
+* Keep it OOCSS and use un-nested class names
+* But if nesting is absolutely necessary keep it as minimal as possible.
+* Use Auto Prefixer 
 * List Vendor/Global Dependancies First, Then Author Dependancies, Then Patterns, Then Parts
 * Break Into As Many Small Files As Makes Sense => Use More Components
 * Modules are Named _module.scss
@@ -142,9 +161,10 @@ This will create a file with some default comments, in this case named ```_examp
 * List Base Class and Declaration Block First
 * Nest All Pseduo-Classes Directly Beneath Base Properties and Values
 * Media Queries Belong Right After Pseudo-Classes
-* List Tags Next. But Remember, We Should be Following the BEM Sytax So Those Should Be In Base. 
-* List any Class Elements Next, in BEM Syntax of Course.
-* List any Class Modifiers at the End of the Declaration Block
+* List Tags Next if absolutely necessary. 
+* Nest BEM Module Children right beneath parent module using the SASS 3.3 BEM update
+* List any Class Modifiers at the End of the Declaration Block after all module children
+* Use included grid. It's super rad => [http://jeet.gs/](http://jeet.gs/)
 * Include all Hacky and Gross CSS in application.scss at Bottom in 'Shame' Section
 
 **Info on style guides => [http://css-tricks.com/sass-style-guide/](http://css-tricks.com/sass-style-guide/)**
@@ -162,16 +182,13 @@ This will create a file with some default comments, in this case named ```_examp
             width: 25%;
         }
 
-        /* -- module__item */
-        &__item {
-            display: inline-block;
-        }
+    .module__item {
+        display: inline-block;
+    }
 
-        /* -- module--alt */
-        &--alt {
-            @extend .module;
-            color: green;
-        }
+    .module--alt {
+        @extend .module;
+        color: green;
     }
 ```
 
@@ -180,7 +197,7 @@ This will create a file with some default comments, in this case named ```_examp
 * **Class names impart little or no useful semantic information to** machines or human visitors unless it is part of a small set of agreed upon (and machine readable) names – Microformats.
 * **The primary purpose of a class name is to be a hook for CSS (Use ID's for JS on unique selectors. Prefix all JS hooks with 'js-').** If you don’t need to add presentation and behaviour to your web documents, then you probably don’t need classes in your HTML.
 * **Class names should communicate _useful_ information to _developers_.** It’s helpful to understand what a specific class name is going to do when you read a DOM snippet, especially in multi-developer teams where front-enders won’t be the only people working with HTML components.
-* Class names are named using adjectives and nouns. 
+* Class names are named using adjectives and nouns.  
 
 **Info on naming => [http://nicolasgallagher.com/about-html-semantics-front-end-architecture/](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)**
 
@@ -201,29 +218,20 @@ This will create a file with some default comments, in this case named ```_examp
 Throw this snippet in your Emmet Sublime User Settings to enable some quick keyboard shortcuts
 ```json
 {
-  "snippets": {
-    "html": {
-      "abbreviations": {
-        "example": "<div class='example' title='Custom element example'>"
-      },
-      "snippets": {
-        "pict": "<picture>\n\t<source media='(min-width: 64em)' src='high-res.jpg'>\n\t<source media='(min-width: 37.5em)' src='med-res.jpg'>\n\t<source src='low-res.jpg'>\n\t<img src='fallback.jpg' alt=' '>\n</picture>"
-      }
-    },
+  "snippets": { 
     "css": {
       "snippets": {
-        "mq+": "// -- Max Width @ ${1:width}\n@include max-breakpoint(${1:width}) {\n|\n}",
-        "mq-": "// -- Min Width @ ${1:width}\n@include min-breakpoint(${1:width}) {\n|\n}",
+        "mq-": "// -- Min Width @ ${1:width}\n@media #{${1:width}} {\n|\n}",
         "com": "// -------------------------------------\n//   ${1:Comment Name} \n// -------------------------------------",
         "scom": "// -- ${1:Small Comment}"
-      }
+      } 
     }
   }
-}
+} 
 ```
 **Custom snippets definitions => [https://github.com/emmetio/emmet/blob/master/snippets.json](https://github.com/emmetio/emmet/blob/master/snippets.json)**
 
 ####Preprocessors 
-* Do not nest deeper than 3 levels (with the exception of pseudo/hover states).
+* Do not NEST! (with the exception of pseudo/hover states and module modifier and child classes).
 * Declare ```@extend``` followed by styles then ```@include``` statements at the end of the declaration block whenever possible.
 * If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed

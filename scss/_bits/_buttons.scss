@@ -1,0 +1,60 @@
+// -------------------------------------
+//   Button Bits
+// -------------------------------------
+// ----- Styles for buttons
+// -------------------------------------
+
+// -- Button Mixin
+@mixin button(
+  $btn-color: $primary-light,
+  $btn-border-color: $primary-light,
+  $btn-text-color: $white,
+  $btn-font-size: 14,
+  $btn-padding: 10,
+  $btn-border-size: 1,
+  $btn-border-radius: $border-radius) {
+    display: inline-block; 
+    padding: u(rem($btn-padding));
+    background-color: $btn-color;
+    color: $btn-text-color;
+    border: u(rem($btn-border-size)) solid $btn-border-color;
+    border-radius: u(rem($btn-border-radius));
+    text-align: center;
+    text-decoration: none;
+    font: inherit;
+    transition: all .5s ease-in-out;
+    @include font-size($btn-font-size);
+    &:hover {
+      color: $btn-text-color;
+      background-color: $primary;
+      border-color: $primary;
+    }
+    &:focus, &:active {
+      outline: 0;
+      border-color: $primary-lighter;
+    }
+}
+
+
+// -- Default   
+.button, button {
+  @include button();
+}
+
+// -- Secondary button
+.button--secondary {
+  @include button(transparent, $primary, $primary, 14, 7, 3); 
+  &:hover, &:active {
+    color: $white;
+  }
+}
+
+// -- Button sizes
+.button--large {
+  padding: u(rem(20));
+}
+
+
+// -------------------------------------
+//   Button States
+// -------------------------------------

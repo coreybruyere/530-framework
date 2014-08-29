@@ -1,0 +1,130 @@
+// -------------------------------------
+//   Helpers
+// -------------------------------------
+// ----- Helper and Placeholder Classes
+// -------------------------------------
+
+
+// -------------------------------------
+//   Placeholders
+// -------------------------------------
+
+// -- Image Replacement
+%ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+%ir:before {    
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+// -- Clearfix
+%clearfix, .clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }  
+}
+
+
+
+// -------------------------------------
+//   Helper Classes
+// -------------------------------------
+
+.img {
+  display: inline-block;
+  margin: 0 0 u(rem(10)) 0;
+}
+
+.img--responsive {
+  display: block;
+  height: auto;
+  // width: 100%;
+  max-width: 100%;
+}
+.img--left {
+  @extend .img;
+  float: left;
+  margin-right: u(rem(10));
+}
+
+.img--right {
+  @extend .img;
+  float: right;
+  margin-left: u(rem(10)); 
+}
+
+.no-pad {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.float-l {
+  float: left; 
+}
+
+.float-r {
+  float: right;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.text-r {
+  text-align: right;
+}
+
+.text-l {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.is-active {
+  display: block;
+}
+
+.is-hidden {
+  display: none;
+}
+
+
+// -- Grid Helpers 
+
+.grid {
+  @include center( u(rem(1024)) );
+}
+
+.grid__fourth {
+  @include column ( 1 / 4 );
+}
+
+.grid__third {
+  @include column ( 1 / 3 );
+}
+
+.grid__half {
+  @include column ( 1 / 2 );
+}
+
+.grid__full {
+  @include column ( 1 );
+}
+
+
+

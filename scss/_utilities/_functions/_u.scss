@@ -1,0 +1,32 @@
+$pixelBase : 16;
+
+@function parseInt($n) {
+      @return $n / ($n * 0 + 1);
+}
+
+@function u($values){
+
+      $list: ();
+
+      @each $value in $values {
+
+            $unit : unit($value);
+            $val  : parseInt($value);
+
+            @if ($px-only) and ($unit == 'rem') {
+                  $list: append($list, ($val * $pixelBase) + px);
+            }
+
+            @else if($unit == 'px') or ($unit == 'rem'){
+                  $list: append($list, $value);
+            }
+
+            @else {
+                  @warn 'There is no unit conversion for #{$unit}';
+            }
+
+      }
+
+      @return $list();
+
+}

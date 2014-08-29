@@ -1,0 +1,56 @@
+// -------------------------------------
+//   Flag Module
+// -------------------------------------
+// ----- Styles Flag Objects
+// -------------------------------------
+
+.flag {
+    display: table;
+    width: 100%;
+}
+
+.flag__image,
+.flag__body {
+    display: block;
+    margin-top: u(rem(15));
+    vertical-align: middle;
+    // -- Min Width @ $mobile
+    @media #{$mobile} {
+        display: table-cell;
+        margin-top: 0;
+    }
+
+    .flag--top & {
+        vertical-align: top;
+    }
+
+    .flag--bottom & {
+        vertical-align: bottom;
+    }
+
+}
+
+.flag__image {
+    padding-right: u(rem(10));
+
+    > img {
+        display: block;
+        width: auto;
+        max-width: none;
+    }
+
+    .flag--rev & {
+        padding-right: 0;
+        padding-left: u(rem(10));
+    }
+
+}
+
+.flag__body {
+    width: 100%;
+}
+
+
+// -------------------------------------
+//   States
+// -------------------------------------

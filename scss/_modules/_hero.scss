@@ -1,0 +1,23 @@
+// -------------------------------------
+//   Media Modules
+// -------------------------------------
+// ----- Styles media modules
+// -------------------------------------
+
+.hero {
+	padding: u(rem(65)) u(rem(10)) u(rem(40));
+	background-color: $secondary-lighter;
+	text-align: center; 
+	@include fadeIn;
+	// -- Min Width @ $tablet
+	@media #{$tablet} {
+		padding: u(rem(75)) u(rem(60)) u(rem(60));
+	}
+}
+ 
+
+
+
+// -------------------------------------
+//   States
+// -------------------------------------

@@ -1,0 +1,49 @@
+// -------------------------------------
+//   Search-Form 
+// -------------------------------------
+// ----- Search-Form Styles using form elements from bits/_forms.scss
+// -------------------------------------
+
+%search-form__icon{
+	@extend .icon-svg;
+	width: u(rem(20));
+	height: u(rem(20));
+}
+
+.search-form[role="search"] {
+	position: relative;
+}
+
+.search-form__field {
+	width: 100%;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+.search-form__group {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-right: u(rem(10)); 
+}
+
+.search-form__button {
+	padding: u(rem(10)) 0 u(rem(10)) u(rem(5));
+	border: 0;
+	background-color: transparent;
+	&:hover, &:active {
+		background-color: transparent;
+	}
+}
+
+.search-form__close {
+	@extend %search-form__icon;
+	width: u(rem(19));
+	height: u(rem(19));
+	fill: $primary-lighter;
+}
+
+.search-form__submit {
+	@extend %search-form__icon;
+}

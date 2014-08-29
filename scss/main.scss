@@ -1,0 +1,75 @@
+// =====================================
+// -- 530-framework  
+// -- https://github.com/coreybruyere/530-framework
+// =====================================
+
+// -------------------------------------
+//   main.scss 
+// -------------------------------------
+// ----- Contains an import section for  
+// ----- utilites, vendors, bits, modules, sections, and templates.
+// ----- Also includes a shame section for quick fixes and hacks
+
+// -------------------------------------
+//   Config
+// -------------------------------------
+ 
+$old-ie: false;
+$px-only: false;
+ 
+
+// -------------------------------------
+//   Vendors - All Vendor CSS and SCSS
+// -------------------------------------
+
+// ----- All Vendors ----- //
+@import "_vendor/vendor";
+
+
+// -------------------------------------
+//   Utilities - Holds the grid, helpers, settings, functions, mixins, and animations
+// -------------------------------------
+
+// ----- All Utilities ----- //
+@import "_utilities/utilities";  
+
+
+// -------------------------------------
+//   Bits - Base level tag styling (Nav, buttons, inputs, etc.) *REUSABLE PIECES
+// -------------------------------------
+
+// ----- All Imported Bits ----- //
+@import "_bits/bits";
+
+
+// -------------------------------------
+//   Modules - Bits combined together form modules. *REUSABLE LARGER PIECES
+// -------------------------------------
+
+// ----- All Imported Modules ----- //
+@import "_modules/modules";
+
+
+// -------------------------------------
+//   Sections - Groups of Modules and/or Bits to make a complex section. *NOT AS REUSABLE
+// -------------------------------------
+
+// ----- All Imported Sections ----- //
+@import "_sections/sections";
+
+
+// -------------------------------------
+//   Templates - Templates made of Modules stitched together to form pages. *NOT REUSABLE
+// -------------------------------------
+
+// ----- All Imported Templates ----- //
+@import "_templates/templates";
+
+
+// -------------------------------------
+//   Shame 
+// -------------------------------------
+// ----- Need to add a quick fix, hack, or questionable technique?  Add it here, fix it later.
+
+
+
