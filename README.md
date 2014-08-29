@@ -1,4 +1,4 @@
-#**Snuggie - An Organizational Template**  
+#**Snuggie - A Sass-based CSS architecture**  
 
 530medialab's Organizational Template. Inspired by MVCSS, CSS Burrito, the GroupBuddies template, and hints of SMACSS and OOCSS. This template follows the BEM syntax and uses SASS. To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
 
@@ -17,8 +17,6 @@
 * Increase the semantic value of HTML and content.
 * Decrease the expectation of a specific HTML structure. 
 * Organize your css files into sections like **base rules**, **layout rules**, and **modules** so that the styling will be flexible and easily maintainable.
-
-####[MVCSS] (http://mvcss.github.io/) - A Sass based CSS architecture and style guide.  
 
 ##**What's in this project?**
 ```
@@ -73,7 +71,7 @@ stylesheets/
 `– ie.scss       # ie Sass file for ie 8 and down
 ```
 
-###This template has seven main ingredients.  
+###This template has seven main pieces.  
 
 ####**0.  main.scss & ie.scss**
 - This section serves two purposes.  
@@ -91,7 +89,7 @@ Bits can also include more abstract elements like color palettes, typography and
 * ** Sections are groups of modules and/or bits joined together to form a relatively complex, distinct section of an interface, such as a header or a footer. This is where we declare our main body, footer, header, and sidebar wrappers & containers. Sections are used to ensure wrappers and containers are consistent throughtout the whole site. These should be the first pieces that are built on a project. 
 
 ####**4.  Templates**
-* ** Templates consist mostly of groups of Modules stitched together to form pages. Templates are very concrete and piece together our Bits and Modules. Templates can also consist of unique page styling --  [Think Board Mapping Page on Arbor](http://arborcollective.com/snowboards/board-mapping/ "Board Mapping Page"). 
+* ** Templates consist mostly of groups of Modules stitched together to form pages. Templates are very concrete and piece together our Bits and Modules. Templates can also consist of unique page styling. 
 
 ####**5.  Utilities**
 * ** Utilities hold the Grid, Animations functions, Settings (Font Declarations, Color, Type, and Media Query Variables), Helpers (Helper classes, mixins, functions, utilities), and Normalize, or a custom reset. 
@@ -100,8 +98,6 @@ Bits can also include more abstract elements like color palettes, typography and
 * ** All Vendor CSS and/or SASS goes here. Along with normalize.css.
 
 ###Lets talk about States.
-
-Inside the **components** file and in the **example-module** file, there is a section for styling states.
 
 * States are styles that override all other styles.  Usually via javascript.  
 * States are generally applied to the same element as a layout rule, or to the same element as a base module.
@@ -112,60 +108,29 @@ Inside the **components** file and in the **example-module** file, there is a se
 ###Wrapping it all together.
 This template should feel intuitive and easy to use.  The goal is to keep everything organized so that large projects will scale nicely without duplicating code, or having unnecessary increases in specificity.
 
-<!-- ##Setup
-To make adding new modules easy, css-burrito has a shell script that will add new modules for you.
-
-**To use this feature:**  
-
-Open up the command line, and navigate to the project root.  
-
-``` cd ~/Desktop/css-burrito-master```
-
-Then run the following command   
-
-``` ./setup.sh```  
-
-This will only need to be done once.  
-
-After that,  navigate to the modules folder in any project that has a ```burrito.sh``` file.  
-
-```cd path/to/project/stylesheets/modules```
-
-From here, in the command line, you can type  
-
-```burrito example-module ```
-
-This will create a file with some default comments, in this case named ```_example-module.scss``` and import it into the main ```_modules.scss``` file for you.  
- -->
 ##Styleguide
 
 ####General Styling  
-* Avoid using ID's.  Use classes instead.
-* All CSS class names should use BEM syntax with double underscore and double dash.
+* Avoid using ID's.  Use classes instead
+* All CSS class names should use BEM syntax with double underscore and double dash
 * Read more about BEM below in Naming Conventions
-* DO NOT over-qualify selectors.  Keep specificity number as low as possible.
-* Use one discrete, comma separated selector per line in multi-selector rulesets.
-* List @extend(s) First
-* List "Regular" Styles Next
-* List @include(s) Next
-* Try not to Nest! 
+* DO NOT over-qualify selectors.  Keep specificity number as low as possible
+* Use one discrete, comma separated selector per line in multi-selector rulesets
+* List @extend(s) first
+* List "regular" styles next
+* List @include(s) next
+* Nest all pseduo-classes directly beneath base properties and values
+* Media queries belong right after pseudo-classes
+* Nest tags beaneath if absolutely necessary, but try to refrain from that 
 * Keep it OOCSS and use un-nested class names
-* But if nesting is absolutely necessary keep it as minimal as possible.
-* Use Auto Prefixer 
-* List Vendor/Global Dependancies First, Then Author Dependancies, Then Patterns, Then Parts
-* Break Into As Many Small Files As Makes Sense => Use More Components
-* Modules are Named _module.scss
-* In Deployment, Compile Compressed
-* Be Generous With Comments & Use Same Comment Block Style => "// -- Comment Text"
-* Variablize All Colors,Common Numbers, and Numbers with Meaning
-* List Base Class and Declaration Block First
-* Nest All Pseduo-Classes Directly Beneath Base Properties and Values
-* Media Queries Belong Right After Pseudo-Classes
-* List Tags Next if absolutely necessary. 
-* Nest BEM Module Children right beneath parent module using the SASS 3.3 BEM update
-* List any Class Modifiers at the End of the Declaration Block after all module children
+* List any class modifiers after all module children
+* Use auto prefixer 
+* Break into as many small files as makes sense
+* Modules are named _module.scss
+* Be generous with comments & use same comment block style => "// -- Comment Text"
+* Variablize all colors, numbers, etc.
 * Use included grid. It's super rad => [http://jeet.gs/](http://jeet.gs/)
-* Include all Hacky and Gross CSS in application.scss at Bottom in 'Shame' Section
+* Include all Hacky and Gross CSS in main.scss at the Bottom in 'Shame' Section
 
 **Info on style guides => [http://css-tricks.com/sass-style-guide/](http://css-tricks.com/sass-style-guide/)**
 

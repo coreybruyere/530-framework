@@ -10,7 +10,6 @@
 
 // -- Burger
 
-
 @mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 3px, $transition-duration: .3s) {
     $burger-height: $height !global;
     $burger-gutter: $gutter !global;
