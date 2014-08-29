@@ -75,7 +75,7 @@ stylesheets/
 
 ###This template has seven main ingredients.  
 
-####**0.  main.scss / ie.scss **
+####**0.  main.scss & ie.scss**
 - This section serves two purposes.  
 * It imports all files from each folder.  
 * It has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later. Included at the top of each of these files are variables that allow for ie specific compiling. 
