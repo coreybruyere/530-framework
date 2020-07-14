@@ -73,28 +73,28 @@ stylesheets/
 
 ### This template has seven main pieces
 
-#### 0.  main.scss & ie.scss**
+#### 1.  main.scss & ie.scss
 - This section serves two purposes.  
 * It imports all files from each folder.  
 * It has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later. Included at the top of each of these files are variables that allow for ie specific compiling. 
 
-#### 1.  Bits**
+#### 2.  Bits
 * ** Bits are the basic, smaller building blocks of matter. Applied to web interfaces, Bits are our HTML tags, such as a form label, an input or a button.
 Bits can also include more abstract elements like color palettes, typography and more.
 
-#### 2.  Modules**
+#### 3.  Modules
 * ** Modules are groups of Bits combined together and are the smallest fundamental units of a compound, built for **reuse.** These Modules take on their own properties and serve as the backbone of our design system. For example, a search form.
 
-#### 3.  Sections**
+#### 4.  Sections
 * ** Sections are groups of modules and/or bits joined together to form a relatively complex, distinct section of an interface, such as a header or a footer. This is where we declare our main body, footer, header, and sidebar wrappers & containers. Sections are used to ensure wrappers and containers are consistent throughtout the whole site. These should be the first pieces that are built on a project. 
 
-#### 4.  Templates**
+#### 5.  Templates
 * ** Templates consist mostly of groups of Modules stitched together to form pages. Templates are very concrete and piece together our Bits and Modules. Templates can also consist of unique page styling. 
 
-#### 5.  Utilities**
+#### 6.  Utilities
 * ** Utilities hold the Grid, Animations functions, Settings (Font Declarations, Color, Type, and Media Query Variables), Helpers (Helper classes, mixins, functions, utilities), and Normalize, or a custom reset. 
 
-#### 7.  Vendors**
+#### 7.  Vendors
 * ** All Vendor CSS and/or SASS goes here. Along with normalize.css.
 
 #### Lets talk about States
