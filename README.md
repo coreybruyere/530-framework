@@ -1,24 +1,24 @@
-#**Snuggie - A Sass-based CSS architecture**  
+# Snuggie - A Sass-based CSS architecture
 
 530medialab's Organizational Template. Inspired by MVCSS, CSS Burrito, the GroupBuddies template, and hints of SMACSS and OOCSS. This template follows the BEM syntax and uses SASS. To understand why you would want to use this template, it is a great idea to familiarize yourself with the following css architectures:  
 
-####[BEM](http://bem.info/method/) - Block, Element, Modifier
+## [BEM](http://bem.info/method/) - Block, Element, Modifier
 
 * BEM stands for Block, Element, Modifier. The meaning of these terms will be described further in the article.
 * One of the most common examples of a methodology in programming is Object-Oriented Programming. It's a programming paradigm embodied by many languages. In some ways, BEM is similar to OOP. It's a way of describing reality in code, a range of patterns, and a way of thinking about program entities regardless of programming languages being used. 
 
-####[OOCSS](http://oocss.org/) - Object Oriented CSS
+## [OOCSS](http://oocss.org/) - Object Oriented CSS
 
 * **Separate structure and skin** - Structure properties like padding and margin should be separated from skin properties like background and border.
 * **Separate content from container** - Content modules like buttons and lists should not be dependent on their parent containers.  
 
-####[SMACSS] (http://smacss.com/) - Scalable and Modular Architecture for CSS
+## [SMACSS] (http://smacss.com/) - Scalable and Modular Architecture for CSS
 
 * Increase the semantic value of HTML and content.
 * Decrease the expectation of a specific HTML structure. 
 * Organize your css files into sections like **base rules**, **layout rules**, and **modules** so that the styling will be flexible and easily maintainable.
 
-##**What's in this project?**
+## What's in this project?
 ```
 stylesheets/ 
 |
@@ -71,33 +71,33 @@ stylesheets/
 `– ie.scss       # ie Sass file for ie 8 and down
 ```
 
-###This template has seven main pieces.  
+### This template has seven main pieces
 
-####**0.  main.scss & ie.scss**
+#### 0.  main.scss & ie.scss**
 - This section serves two purposes.  
 * It imports all files from each folder.  
 * It has a **Shame** section for quick fixes, hacks, and other questionable techniques.  Be sure to fix them later. Included at the top of each of these files are variables that allow for ie specific compiling. 
 
-####**1.  Bits**
+#### 1.  Bits**
 * ** Bits are the basic, smaller building blocks of matter. Applied to web interfaces, Bits are our HTML tags, such as a form label, an input or a button.
 Bits can also include more abstract elements like color palettes, typography and more.
 
-####**2.  Modules**
+#### 2.  Modules**
 * ** Modules are groups of Bits combined together and are the smallest fundamental units of a compound, built for **reuse.** These Modules take on their own properties and serve as the backbone of our design system. For example, a search form.
 
-####**3.  Sections**
+#### 3.  Sections**
 * ** Sections are groups of modules and/or bits joined together to form a relatively complex, distinct section of an interface, such as a header or a footer. This is where we declare our main body, footer, header, and sidebar wrappers & containers. Sections are used to ensure wrappers and containers are consistent throughtout the whole site. These should be the first pieces that are built on a project. 
 
-####**4.  Templates**
+#### 4.  Templates**
 * ** Templates consist mostly of groups of Modules stitched together to form pages. Templates are very concrete and piece together our Bits and Modules. Templates can also consist of unique page styling. 
 
-####**5.  Utilities**
+#### 5.  Utilities**
 * ** Utilities hold the Grid, Animations functions, Settings (Font Declarations, Color, Type, and Media Query Variables), Helpers (Helper classes, mixins, functions, utilities), and Normalize, or a custom reset. 
 
-####**7.  Vendors**
+#### 7.  Vendors**
 * ** All Vendor CSS and/or SASS goes here. Along with normalize.css.
 
-###Lets talk about States.
+#### Lets talk about States
 
 * States are styles that override all other styles.  Usually via javascript.  
 * States are generally applied to the same element as a layout rule, or to the same element as a base module.
@@ -105,12 +105,12 @@ Bits can also include more abstract elements like color palettes, typography and
 * State class names should be written as a boolean.  For example, ```.is-collapsed``` or ```.is-error```.
 * When state rules are added to specific modules, the module name should be included in the classname.  For example, an active tab state could be written as ```.is-tab-active```.
 
-###Wrapping it all together.
+#### Wrapping it all together
 This template should feel intuitive and easy to use.  The goal is to keep everything organized so that large projects will scale nicely without duplicating code, or having unnecessary increases in specificity.
 
-##Styleguide
+### Styleguide
 
-####General Styling  
+#### General Styling  
 * Avoid using ID's.  Use classes instead
 * All CSS class names should use BEM syntax with double underscore and double dash
 * Read more about BEM below in Naming Conventions
@@ -135,7 +135,7 @@ This template should feel intuitive and easy to use.  The goal is to keep everyt
 
 **Info on style guides => [http://css-tricks.com/sass-style-guide/](http://css-tricks.com/sass-style-guide/)**
 
-####Styleguide Example
+#### Styleguide Example
 ```css
     .module {
         @extend %clearfix;
@@ -158,7 +158,7 @@ This template should feel intuitive and easy to use.  The goal is to keep everyt
     }
 ```
 
-####Naming Conventions
+#### Naming Conventions
 * **Content-layer semantics are already served by HTML** elements and other attributes.
 * **Class names impart little or no useful semantic information to** machines or human visitors unless it is part of a small set of agreed upon (and machine readable) names – Microformats.
 * **The primary purpose of a class name is to be a hook for CSS (Use ID's for JS on unique selectors. Prefix all JS hooks with 'js-').** If you don’t need to add presentation and behaviour to your web documents, then you probably don’t need classes in your HTML.
@@ -167,7 +167,7 @@ This template should feel intuitive and easy to use.  The goal is to keep everyt
 
 **Info on naming => [http://nicolasgallagher.com/about-html-semantics-front-end-architecture/](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)**
 
-####Naming Example
+#### Naming Example
 ```css
     /* -- Block Noun */
     .person {}
@@ -180,7 +180,7 @@ This template should feel intuitive and easy to use.  The goal is to keep everyt
 ```
 **Info on BEM Syntax => [http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)**
 
-####Commenting/Snippets
+#### Commenting/Snippets
 Throw this snippet in your Emmet Sublime User Settings to enable some quick keyboard shortcuts
 ```json
 {
@@ -197,7 +197,7 @@ Throw this snippet in your Emmet Sublime User Settings to enable some quick keyb
 ```
 **Custom snippets definitions => [https://github.com/emmetio/emmet/blob/master/snippets.json](https://github.com/emmetio/emmet/blob/master/snippets.json)**
 
-####Preprocessors 
+#### Preprocessors 
 * Do not NEST! (with the exception of pseudo/hover states and module modifier and child classes).
 * Declare ```@extend``` followed by styles then ```@include``` statements at the end of the declaration block whenever possible.
 * If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed
