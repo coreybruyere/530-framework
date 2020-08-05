@@ -12,7 +12,7 @@
 * **Separate structure and skin** - Structure properties like padding and margin should be separated from skin properties like background and border.
 * **Separate content from container** - Content modules like buttons and lists should not be dependent on their parent containers.  
 
-## [SMACSS] (http://smacss.com/) - Scalable and Modular Architecture for CSS
+## [SMACSS](http://smacss.com/) - Scalable and Modular Architecture for CSS
 
 * Increase the semantic value of HTML and content.
 * Decrease the expectation of a specific HTML structure. 
